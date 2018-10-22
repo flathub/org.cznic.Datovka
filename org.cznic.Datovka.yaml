@@ -2,7 +2,7 @@ app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
 runtime-version: '5.11'
-command: datovka-run
+command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.appdata.xml
 rename-icon: datovka
@@ -37,7 +37,8 @@ modules:
   - name: datovka
     buildsystem: qmake
     post-install:
-        - install -m755 datovka-run /app/bin/datovka-run
+        - mv /app/bin/datovka /app/bin/datovka-run
+        - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
           url: https://secure.nic.cz/files/datove_schranky/4.11.0/datovka-4.11.0.tar.xz
@@ -49,9 +50,9 @@ modules:
         - type: patch
           path: paths.patch
         - type: script
-          dest-filename: datovka-run
+          dest-filename: datovka-script
           commands: 
-            - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka "$@"	  
+            - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka-run "$@"	  
   
 cleanup:
   - "*.a"
