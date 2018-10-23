@@ -41,8 +41,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.11.0/datovka-4.11.0.tar.xz
-          sha256: 0908ed53556674bbaaeddddb64e2301d77c3b5773a9b8bb863aafad6b94b153f
+          url: https://secure.nic.cz/files/datove_schranky/4.11.1/datovka-4.11.1.tar.xz
+          sha256: 50a0be3f8b3f3b645157675104af79277692ad202251c31c943f0fcf71d5dda0
         - type: patch
           path: datovka.patch
         - type: patch
