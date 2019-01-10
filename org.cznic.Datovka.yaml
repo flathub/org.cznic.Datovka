@@ -1,7 +1,7 @@
 app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '5.11'
+runtime-version: '5.12'
 command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.appdata.xml
@@ -25,8 +25,8 @@ modules:
         - --without-python
     sources:
         - type: archive
-          url: https://gitlab.gnome.org/GNOME/libxml2/-/archive/v2.9.8/libxml2-v2.9.8.tar.bz2
-          sha256: 75f60530c4ff9717930ea28abcf3dfc4b213ac7617884f37637d069b01032b8a
+          url: https://gitlab.gnome.org/GNOME/libxml2/-/archive/v2.9.9/libxml2-v2.9.9.tar.bz2
+          sha256: d598e907b5f3efa992b65094f7113d9d8cc87238f32e4e1ddf8beff01b60a653
 
   - name: libisds
     sources:
@@ -36,9 +36,6 @@ modules:
 
   - name: datovka
     buildsystem: qmake
-    post-install:
-        - mv /app/bin/datovka /app/bin/datovka-run
-        - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
           url: https://secure.nic.cz/files/datove_schranky/4.11.1/datovka-4.11.1.tar.xz
@@ -48,11 +45,7 @@ modules:
         - type: patch
           path: appdata.patch
         - type: patch
-          path: paths.patch
-        - type: script
-          dest-filename: datovka-script
-          commands: 
-            - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka-run "$@"	  
+          path: paths.patch  
   
 cleanup:
   - "*.a"
