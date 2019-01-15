@@ -38,8 +38,8 @@ modules:
     buildsystem: qmake
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.11.1/datovka-4.11.1.tar.xz
-          sha256: 50a0be3f8b3f3b645157675104af79277692ad202251c31c943f0fcf71d5dda0
+          url: https://secure.nic.cz/files/datove_schranky/4.12.0/datovka-4.12.0.tar.xz
+          sha256: a7a87f22b0eddaee8064c03fe6707c772100d893b0d8d57b0b93ba76a6379ab5
         - type: patch
           path: datovka.patch
         - type: patch
