@@ -36,16 +36,23 @@ modules:
 
   - name: datovka
     buildsystem: qmake
+    post-install:
+        - mv /app/bin/datovka /app/bin/datovka-run
+        - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.12.0/datovka-4.12.0.tar.xz
-          sha256: a7a87f22b0eddaee8064c03fe6707c772100d893b0d8d57b0b93ba76a6379ab5
-        - type: patch
-          path: datovka.patch
+          url: https://secure.nic.cz/files/datove_schranky/4.13.0/datovka-4.13.0.tar.xz
+          sha256: f091cda00a2b138578c1b1b05f76b22871dc37669db17af723d7918fde0f605e
+#        - type: patch
+#          path: datovka.patch
         - type: patch
           path: appdata.patch
         - type: patch
-          path: paths.patch  
+          path: paths.patch
+        - type: script
+          dest-filename: datovka-script
+          commands: 
+            - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka-run "$@"  
   
 cleanup:
   - "*.a"

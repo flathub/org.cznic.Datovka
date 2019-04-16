@@ -1,139 +1,55 @@
---- ./deployment/datovka.appdata.xml	2019-01-15 09:06:29.000000000 +0100
-+++ datovka.appdata.xml	2019-01-15 16:35:34.922917163 +0100
-@@ -1,48 +1,52 @@
--<?xml version="1.0" encoding="utf-8"?>
--<!-- Copyright 2015 CZ.NIC Labs -->
-+<?xml version="1.0" encoding="UTF-8"?>
- <application>
--	<id type="desktop">datovka.desktop</id>
-+	<id type="desktop">org.cznic.Datovka</id>
- 	<metadata_license>CC0-1.0</metadata_license>
- 	<project_license>GPL-3.0+</project_license>
- 
- 	<name>Datovka</name>
- 	<name xml:lang="cs">Datovka</name>
- 
--	<summary>A free graphical user interface for data boxes</summary>
--	<summary xml:lang="cs">Svobodné uživatelské rozhraní pro datové schránky</summary>
-+	<summary>A free graphical user interface for Datove schranky</summary>
-+	<summary xml:lang="cs">Svobodné uživatelské rozhraní pro Datové schránky</summary>
- 
- 	<description>
- 		<p>
--			Datovka is a multiplatform desktop application for accessing data boxes.
--			A data box is an electronic storage site in Czech Republic. It is intended
--			for delivery of official documents and for communication with public
--			authority bodies.
-+			Datovka is a multiplatform desktop application to access Datove schranky.
- 		</p>
+--- ./deployment/datovka.appdata.xml	2019-04-16 17:19:59.017563122 +0200
++++ datovka.appdata.xml	2019-04-16 17:59:09.249434862 +0200
+@@ -41,6 +41,12 @@
  		<p xml:lang="cs">
--			Datovka je multiplatformní desktopová aplikace pro přístup k datovým schránkám.
--			Datová schránka v České republice je elektronické úložiště, které je určeno
--			k doručování dokumentů a pro komunikaci s orgány veřejné moci.
-+			Datovka je multiplatformní desktopová aplikace pro přístup k Datovým schránkám.
+ 			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
  		</p>
- 
- 		<p>
--			Datovka allows receiving, sending, and checking the integrity of data messages,
-+			Datovka allows receiving, sending, and checking integrity of messages,
- 			exporting proofs of delivery or full messages, exporting complete
--			correspondence for a defined period, etc.
-+			coresspondence for a defined period, etc..
- 		</p>
- 		<p xml:lang="cs">
--			Z Datovky je možné číst zprávy, odesílat zprávy, kontrolovat integritu datových zpráv,
-+			Z Datovky je možné číst zprávy, odesílat zprávy, kontrolovat integritu zpráv,
- 			exportovat doručenky i celé zprávy, exportovat přehled korespondence za určité
- 			časové období, apod.
- 		</p>
- 
- 		<p>
--			The user interface resembles the interface of common e-mail clients.
-+			The user interface is very similar to common e-mail clients.
- 		</p>
- 		<p xml:lang="cs">
--			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
-+			Uživatelské rozhraní aplikace se velice podobá běžným poštovním klientům. 
-+		</p>
 +		<p>
 +			This flatpak is not maintained by CZ.NIC, z.s.p.o.
 +		</p>
 +		<p xml:lang="cs">
 +			Tento flatpak není spravovaný CZ.NIC, z.s.p.o.
- 		</p>
++		</p>
  	</description>
  
-+	<content_rating type="oars-1.1">
-+		<content_attribute id="social-info">mild</content_attribute>
-+	</content_rating>
-+
  	<kudos>
- 		<kudo>HiDpiIcon</kudo>
- 		<kudo>ModernToolkit</kudo>
-@@ -50,12 +54,65 @@
- 
- 	<screenshots>
- 		<screenshot type="default">
--			<image>https://www.datovka.cz/images/desktop-main.png</image>
--			<caption>Main window of the application</caption>
-+			<image>https://www.nic.cz/files/labs/datove_schranky/datovka4.png</image>
-+			<caption>The main window showing the application in action</caption>
- 			<caption xml:lang="cs">Hlavní okno aplikace</caption>
- 		</screenshot>
- 	</screenshots>
+@@ -58,4 +64,40 @@
  
  	<updatecontact>datove-schranky@labs.nic.cz</updatecontact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
-+		<release version="4.12.0" type="stable" date="2019-01-15" urgency="medium">
++		<release version="4.13.0" type="stable" date="2019-04-16" urgency="medium">
 +			<description>
 +				<p>
-+				See https://www.datovka.cz/cs/2019-01-15-datovka-4.12.0.html
++				See https://www.datovka.cz/cs/pages/instalace.html
 +				</p>
 +				<p xml:lang="cs">
 +					<p>
 +					Nové vlastnosti:
-+						<ul>
-+							<li>Pokud se datové zprávy v aplikaci ukládají do jednotlivých databázových souborů podle roku dodání, tak se při spuštění aplikace načtou jen databáze se zprávami mladšími 90 dnů. Ostatní soubory jsou načítány dle potřeby.</li>
-+							<li>Z datových schránek (převážně fyzických osob) lze zasílat elektronická podání s požadavky na služby Ministerstva vnitra a Správy základních registrů.</li>
-+							<li>Přidány funkce pro zálohování a obnovení lokálně uložených davových zpráv.</li>
-+						</ul>
 +					</p>
++						<ul>
++							<li>U existujícího účtu lze změnit přihlašovací jméno. Podmínkou je, že starým i novým jménem se přihlašuje do stejné datové schránky.</li>
++							<li>Aplikace dovoluje volitelné automatické nahrávání nově stažených datových zpráv do spisové služby v případě, pokud jednací čísla nebo spisové značky nově stažených zpráv jednoznačně odpovídají nějakému umístění v hierarchii spisové služby.</li>
++						</ul>
 +					<p>Vylepšení:
-+						<ul>
-+							<li>Zvýšen limit velikosti příloh na 50 MB. Uživatel je přesto upozorněn, že překročil 20 MB. Limit byl zvýšen, protože některé schránky dovolují přijímat zprávy do 50 MB.</li>
-+							<li>Přidány ikony ovládacích prvků ve vyšším rozlišení.</li>
-+							<li>Přidán popis typu zprávy do dialogu s obsahem zprávy.</li>
-+							<li>Uživatel je dotázán, zda si přeje přerušit nahrávání dokumentu do spisové služby, v případě, kdy vyprší délka spojení.</li>
-+							<li>Zrychleno vykreslování ikon v seznamu zpráv a účtů.</li>
-+							<li>Obsah hlaviček tabulek je zarovnán doleva, stejně jako obsah sloupců.</li>
-+							<li>Při přidávání příloh při tvorbě datové zprávy jsou zvýrazňovány položky obsahující přípony, které nejsou uvedeny v Provozním řádu ISDS.</li>
-+						</ul>
 +					</p>
++						<ul>
++							<li>Volitelné položky formuláře v okně pro odeslání zprávy byly přesunuty na samostatnou kartu.</li>
++							<li>Zvětšena délka zpráv předávaných sdílenou pamětí na 8192 B. Tím je prodloužena i délka příkazu příkazové řádky, které lze předat běžící aplikaci.</li>
++							<li>Aplikace ukládá dočasné soubory do umístění určeného pro uživatelská data sdílená mezi aplikacemi. To by mělo dovolit aplikaci běžet bez problémů v sandboxu, kdy aplikace nemá dovoleno zapisovat do adresáře pro dočasné soubory.</li>
++							<li>Přidány dvě nové volby parametru --compose, které dovolují vynutit následné nahrání odeslané zprávy do spisové služby.</li>
++							<li>Zjednodušen konfigurační soubor, který nyní obsahuje pouze data pro přihlášení do datových schránek. Ostatní nastavení jsou přesunuta do databáze, která dovoluje větší flexibilitu.</li>
++						</ul>
 +					<p>
 +					Opravy chyb:
++					</p>
 +						<ul>
-+							<li>Opraven problém, kdy se zobrazoval obsah nesprávné zprávy v případě, že byl změněn výběr zprávy v době, kdy byla na pozadí stahována další zpráva.</li>
-+							<li>Přidán chybějící certifikát PostSignum Qualified CA 3-TSA potřebný k ověření nejnovějších časových razítek.</li>
++							<li>Opraveno nadměrné zobrazování varování o chybějících souborech databází, když se používají databáze v paměti.</li>
++							<li>Opravena chyba při generování přehledu korespondence, kdy generovaný CSV soubor neobsahoval správné jednací čísla a spisové značky zpráv.</li>
++							<li>Opraven problém, kdy v některých případech doházelo při zobrazení detailu zprávy k záměně označení vaše/naše u spisových značek a jednacích čísel v přehledu korespondence. Místo někdy matoucího označení vaše/naše používáme přehlednější označení příjemce/</li>
++							<li>Opravena chyba, kdy nebyl uvolněn zámek sdílené paměti, pokud ve sdílené paměti nebyl dostatek místa.</li>
 +						</ul>
 +					</p>
-+					</p>
-+			</description>
-+		</release>
-+		<release version="4.11.1" type="stable" date="2018-10-23" urgency="low">
-+			<description>
-+				<p>
-+					Enhancements:
-+						<ul>
-+							<li>When saving or exporting files it's possible to use the %n tag in the file description format for account name.</li>
-+						</ul>
-+				</p>
-+				<p xml:lang="cs">
-+					Vylepšení:
-+						<ul>
-+							<li>Při ukládání nebo exportu souborů lze nově využít ve formátu popisu souboru i značku %n pro název účtu.</li>
-+						</ul>
-+				</p>
 +			</description>
 +		</release>
 +	</releases>
