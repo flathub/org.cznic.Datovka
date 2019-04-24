@@ -1,16 +1,34 @@
-diff --git a/datovka.pro b/datovka.pro
-index 9d11b95..67d947b 100644
---- a/datovka.pro
-+++ b/datovka.pro
-@@ -128,8 +128,9 @@ QMAKE_CXXFLAGS = \
-
- #INCLUDEPATH +=
-
--LIBS = \
--	-lisds
-+LIBS += \
-+	`pkg-config --libs libisds` \
-+	-lgpgme -lgcrypt
-
- isEqual(WITH_BUILT_LIBS, 1) {
- 	warning(Linking with locally built libraries.)
+diff --git a/src/io/filesystem.cpp b/src/io/filesystem.cpp
+index c45342d0..d031b9e8 100644
+--- a/src/io/filesystem.cpp
++++ b/src/io/filesystem.cpp
+@@ -81,6 +81,11 @@ void replaceIllegalChars(QString &str, bool replaceSeparators)
+ 	str.replace(replaceSeparators ? regExp : regExpNoSep, ILL_FNAME_REP);
+ }
+ 
++static inline bool checkFlatpakInstance()
++{
++	return !QStandardPaths::locate(QStandardPaths::RuntimeLocation, QLatin1String("flatpak-info")).isEmpty();
++}
++
+ #undef ILL_FNAME_CH_NO_SEP
+ #undef ILL_FNAME_CH
+ #undef ILL_FNAME_REP
+@@ -385,7 +390,7 @@ QString confDirPath(const QString &confSubdir)
+ 			    dir.toUtf8().constData());
+ 		}
+ 		return dir;
+-	} else if (homeDir.exists() && QFileInfo(homeDir.path()).isWritable()) {
++	} else if (homeDir.exists() && QFileInfo(homeDir.path()).isWritable() && !checkFlatpakInstance()) {
+ 		/*
+ 		 * Default configuration subdirectory in home directory is not
+ 		 * present but home is writeable.
+@@ -410,7 +415,7 @@ QString confDirPath(const QString &confSubdir)
+ 		 * Still using confSubdir in order to let the user change
+ 		 * the configuration via command line.
+ 		 */
+-		return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
++		return QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) +
+ 		    QDir::separator() + confSubdir;
+ #  else /* < Qt-5.4 */
+ #    warning "Compiling against version < Qt-5.4 which does not provide QStandardPaths::AppDataLocation."

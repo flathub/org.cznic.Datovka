@@ -43,8 +43,8 @@ modules:
         - type: archive
           url: https://secure.nic.cz/files/datove_schranky/4.13.0/datovka-4.13.0.tar.xz
           sha256: f091cda00a2b138578c1b1b05f76b22871dc37669db17af723d7918fde0f605e
-#        - type: patch
-#          path: datovka.patch
+        - type: patch
+          path: datovka.patch
         - type: patch
           path: appdata.patch
         - type: patch
@@ -53,7 +53,6 @@ modules:
           dest-filename: datovka-script
           commands: 
             - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka-run "$@"  
-  
 cleanup:
   - "*.a"
   - "*.la"
