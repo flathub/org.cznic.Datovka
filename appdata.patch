@@ -1,5 +1,5 @@
 --- ./deployment/datovka.appdata.xml	2019-04-16 17:19:59.017563122 +0200
-+++ datovka.appdata.xml	2019-04-16 17:59:09.249434862 +0200
++++ datovka.appdata.xml	2019-04-30 10:32:30.448200939 +0200
 @@ -41,6 +41,12 @@
  		<p xml:lang="cs">
  			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
@@ -13,11 +13,21 @@
  	</description>
  
  	<kudos>
-@@ -58,4 +64,40 @@
+@@ -58,4 +64,50 @@
  
  	<updatecontact>datove-schranky@labs.nic.cz</updatecontact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.13.1" type="stable" date="2019-04-29" urgency="high">
++			<description>
++				<p>
++				Fixes crashes during account synchronization using Qt 5.10 and newer.
++				</p>
++				<p xml:lang="cs">
++				Opraveny pády aplikace při synchronizaci účtu, kdy byla Datovka spuštěna s Qt-5.10 nebo novějšími verzemi Qt.
++				</p>
++			</description>
++		</release>
 +		<release version="4.13.0" type="stable" date="2019-04-16" urgency="medium">
 +			<description>
 +				<p>
