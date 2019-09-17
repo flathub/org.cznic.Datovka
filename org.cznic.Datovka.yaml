@@ -29,10 +29,12 @@ modules:
           sha256: d598e907b5f3efa992b65094f7113d9d8cc87238f32e4e1ddf8beff01b60a653
 
   - name: libisds
+    config-opts:
+        - --disable-doc
     sources:
         - type: archive
-          url: http://xpisar.wz.cz/libisds/dist/libisds-0.10.8.tar.bz2
-          sha256: 5e3808fd7bb8223b3b56eecb8ed6b670506443f78c5b51e7b8b006d649738cd1
+          url: http://xpisar.wz.cz/libisds/dist/libisds-0.11.tar.bz2
+          sha256: aa1954db7b05d415c743ffb1d7ff1517c21f72fd2eccd34fbb5c9920a998aade
 
   - name: datovka
     buildsystem: qmake
@@ -41,8 +43,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.13.1/datovka-4.13.1.tar.xz
-          sha256: b6f030253200b55bd8b13b124b0b8aaa1c6f7dc27e2e84c6a8abe0ab90986d96
+          url: https://secure.nic.cz/files/datove_schranky/4.14.0/datovka-4.14.0.tar.xz
+          sha256: 19995046434bd8cfab5778f0558167947135f2eeb5cbd15ee7af71210aa6ff60
         - type: patch
           path: datovka.patch
         - type: patch
