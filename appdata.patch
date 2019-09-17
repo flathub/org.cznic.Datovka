@@ -1,6 +1,14 @@
 --- ./deployment/datovka.appdata.xml	2019-04-16 17:19:59.017563122 +0200
-+++ datovka.appdata.xml	2019-09-17 15:36:51.091939195 +0200
-@@ -41,6 +41,12 @@
++++ datovka.appdata.xml	2019-09-17 15:56:33.467597932 +0200
+@@ -4,6 +4,7 @@
+ 	<id type="desktop">datovka.desktop</id>
+ 	<metadata_license>CC0-1.0</metadata_license>
+ 	<project_license>GPL-3.0+</project_license>
++	<content_rating type="oars-1.1" />
+ 
+ 	<name>Datovka</name>
+ 	<name xml:lang="cs">Datovka</name>
+@@ -41,6 +42,12 @@
  		<p xml:lang="cs">
  			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
  		</p>
@@ -13,7 +21,7 @@
  	</description>
  
  	<kudos>
-@@ -56,6 +62,90 @@
+@@ -56,6 +63,90 @@
  		</screenshot>
  	</screenshots>
  
