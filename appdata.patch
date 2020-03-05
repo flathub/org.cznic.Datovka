@@ -1,5 +1,5 @@
---- ./deployment/datovka.appdata.xml	2019-04-16 17:19:59.017563122 +0200
-+++ datovka.appdata.xml	2019-11-21 17:39:00.109177286 +0100
+--- /deployment/datovka.appdata.xml	2019-04-16 17:19:59.017563122 +0200
++++ datovka.appdata.xml	2020-03-05 15:39:37.783464345 +0100
 @@ -4,6 +4,7 @@
  	<id type="desktop">datovka.desktop</id>
  	<metadata_license>CC0-1.0</metadata_license>
@@ -21,7 +21,7 @@
  	</description>
  
  	<kudos>
-@@ -56,6 +63,126 @@
+@@ -56,6 +63,168 @@
  		</screenshot>
  	</screenshots>
  
@@ -29,6 +29,48 @@
 +	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.15.0" type="stable" date="2020-03-05" urgency="medium">
++			<description>
++				<p>
++				New features:
++				</p>
++				<ul>
++					<li>It's possible to create special accounts which are not shown in the account overview in the main window. These accounts can be used by Datovka to periodically check the content of the data box if they have low access rights which don't cause message delivery.</li>
++					<li>Added support for a new feature for records management which reports the number of messages in the data box after a successful sync.</li>
++				</ul>
++				<p>
++				Enhancements:
++				</p>
++				<ul>
++					<li>It's possible to sort lists of searched data boxes.</li>
++				</ul>
++				<p>
++				Bug fixes:
++				</p>
++				<ul>
++					<li>Fixed a bug that caused crashes of the app on startup if Qt 5.14 was used.</li>
++				</ul>
++				<p xml:lang="cs">
++				Nové vlastnosti: 
++				</p>
++				<ul xml:lang="cs">
++					<li>Lze vytvářet speciální účty, které se v aplikaci nezobrazují v přehledu účtů v hlavním okně. Tyto účty, pokud mají nízká přístupová oprávnění nezpůsobující doručení zpráv, dokáže Datovka použít k periodické automatické kontrole obsahu datové schránky.</li>
++					<li>Přidána podpora nové funkce pro spisové služby, která hlásí množství zpráv ve schránce po úspěšné synchronizaci účtu.</li>
++				</ul>
++				<p xml:lang="cs">
++				Vylepšení:
++				</p>
++				<ul xml:lang="cs">
++					<li>Lze řadit seznamy vyhledaných datových schránek.</li>
++				</ul>
++				<p xml:lang="cs">
++				Opravy chyb:
++				</p>
++				<ul xml:lang="cs">
++					<li>Opravena chyba způsobující pád aplikace při startu s Qt-5.14.</li>
++				</ul>
++			</description>
++		</release>
 +		<release version="4.14.1" type="stable" date="2019-11-20" urgency="medium">
 +			<description>
 +				<p>
