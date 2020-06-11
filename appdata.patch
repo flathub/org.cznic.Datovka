@@ -1,67 +1,109 @@
---- /deployment/datovka.appdata.xml	2019-04-16 17:19:59.017563122 +0200
-+++ datovka.appdata.xml	2020-03-05 15:39:37.783464345 +0100
-@@ -4,6 +4,7 @@
- 	<id type="desktop">datovka.desktop</id>
- 	<metadata_license>CC0-1.0</metadata_license>
- 	<project_license>GPL-3.0+</project_license>
-+	<content_rating type="oars-1.1" />
- 
- 	<name>Datovka</name>
- 	<name xml:lang="cs">Datovka</name>
-@@ -41,6 +42,12 @@
- 		<p xml:lang="cs">
- 			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
+--- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003323 +0200
++++ datovka.metainfo.xml	2020-06-11 12:13:32.609485184 +0200
+@@ -31,6 +31,9 @@
+ 		<p>
+ 			The user interface resembles the interface of common e-mail clients.
  		</p>
 +		<p>
 +			This flatpak is not maintained by CZ.NIC, z.s.p.o.
 +		</p>
-+		<p xml:lang="cs">
+ 	</description>
+ 	<description xml:lang="cs">
+ 		<p>
+@@ -46,6 +49,9 @@
+ 		<p>
+ 			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
+ 		</p>
++		<p>
 +			Tento flatpak není spravovaný CZ.NIC, z.s.p.o.
 +		</p>
  	</description>
  
  	<kudos>
-@@ -56,6 +63,168 @@
- 		</screenshot>
- 	</screenshots>
+@@ -63,4 +69,212 @@
  
--	<updatecontact>datove-schranky@labs.nic.cz</updatecontact>
-+	<update_contact>datove-schranky@labs.nic.cz</update_contact>
+ 	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.15.1" type="stable" date="2020-06-10" urgency="low">
++			<description>
++				<p>
++				New features:
++				</p>
++				<ul>
++					<li>In the main menu, the 'Mark everything as read' item was replaced by 'Mark everything as received'</li>
++				</ul>
++				<p>
++				Enhancements:
++				</p>
++				<ul>
++					<li>The code for checking out selection in the main window</li>
++					<li>The user interface is now more responsive when messages are downloaded on the background</li>
++					<li>An entry that contains the account name as it is used in the app was added to the report for records management</li>
++				</ul>
++				<p>
++				Bug fixes:
++				</p>
++				<ul>
++					<li>Fixed a bug when the app didn't remember the location of the last ZFO file opened by the user</li>
++					<li>Fixed a crash while fast switching between messages with an active syncing on the background</li>
++				</ul>
++				<p xml:lang="cs">
++				Nové vlastnosti: 
++				</p>
++				<ul xml:lang="cs">
++					<li>V hlavním menu byla položka „Označit vše jako přečtené“ nahrazena nabídkou „Označit všechny přijaté jako“. </li>
++				</ul>
++				<p xml:lang="cs">
++				Vylepšení:
++				</p>
++				<ul xml:lang="cs">
++					<li>Přepsán kód pro zjišťování stavu výběru v hlavním okně.</li>
++					<li>Zvýšena rychlost odezvy uživatelského rozhraní, když na pozadí běží stahování zpráv.</li>
++					<li>Byl přidán záznam obsahující název účtu, tak jak je používaný v aplikaci, do hlášení o stavu schránky pro spisovou službu.</li>
++				</ul>
++				<p xml:lang="cs">
++				Opravy chyb:
++				</p>
++				<ul xml:lang="cs">
++					<li>Opravena chyba, kdy si aplikace po spuštění nepamatovala umístění posledního uživatelem otevíraného ZFO souboru.</li>
++					<li>Opraven pád aplikace při rychlém přepínání datových zpráv při aktivní synchronizaci na pozadí.</li>
++				</ul>
++			</description>
++		</release>
 +		<release version="4.15.0" type="stable" date="2020-03-05" urgency="medium">
 +			<description>
 +				<p>
 +				New features:
 +				</p>
 +				<ul>
-+					<li>It's possible to create special accounts which are not shown in the account overview in the main window. These accounts can be used by Datovka to periodically check the content of the data box if they have low access rights which don't cause message delivery.</li>
-+					<li>Added support for a new feature for records management which reports the number of messages in the data box after a successful sync.</li>
++					<li>It's possible to create special accounts which are not shown in the account overview in the main window. These accounts can be used by Datovka to periodically check the content of the data box if they have low access rights which don't cause message delivery</li>
++					<li>Added support for a new feature for records management which reports the number of messages in the data box after a successful sync</li>
 +				</ul>
 +				<p>
 +				Enhancements:
 +				</p>
 +				<ul>
-+					<li>It's possible to sort lists of searched data boxes.</li>
++					<li>It's possible to sort lists of searched data boxes</li>
 +				</ul>
 +				<p>
 +				Bug fixes:
 +				</p>
 +				<ul>
-+					<li>Fixed a bug that caused crashes of the app on startup if Qt 5.14 was used.</li>
++					<li>Fixed a bug that caused crashes of the app on startup if Qt 5.14 was used</li>
 +				</ul>
 +				<p xml:lang="cs">
 +				Nové vlastnosti: 
 +				</p>
 +				<ul xml:lang="cs">
-+					<li>Lze vytvářet speciální účty, které se v aplikaci nezobrazují v přehledu účtů v hlavním okně. Tyto účty, pokud mají nízká přístupová oprávnění nezpůsobující doručení zpráv, dokáže Datovka použít k periodické automatické kontrole obsahu datové schránky.</li>
-+					<li>Přidána podpora nové funkce pro spisové služby, která hlásí množství zpráv ve schránce po úspěšné synchronizaci účtu.</li>
++					<li>Lze vytvářet speciální účty, které se v aplikaci nezobrazují v přehledu účtů v hlavním okně. Tyto účty, pokud mají nízká přístupová oprávnění nezpůsobující doručení zpráv, dokáže Datovka použít k periodické automatické kontrole obsahu datové schránky</li>
++					<li>Přidána podpora nové funkce pro spisové služby, která hlásí množství zpráv ve schránce po úspěšné synchronizaci účtu</li>
 +				</ul>
 +				<p xml:lang="cs">
 +				Vylepšení:
 +				</p>
 +				<ul xml:lang="cs">
-+					<li>Lze řadit seznamy vyhledaných datových schránek.</li>
++					<li>Lze řadit seznamy vyhledaných datových schránek</li>
 +				</ul>
 +				<p xml:lang="cs">
 +				Opravy chyb:
@@ -84,7 +126,7 @@
 +				</p>
 +				<ul>
 +					<li>Support for signing in with a mobile key in the command line interface</li>
-+					<li>The format of the backup data file has been generalized. Restoring data from backups is not affected by this change.</li>
++					<li>The format of the backup data file has been generalized. Restoring data from backups is not affected by this change</li>
 +				</ul>
 +				<p>
 +				Bug fixes:
@@ -190,4 +232,4 @@
 +			</description>
 +		</release>
 +	</releases>
- </application>
+ </component>

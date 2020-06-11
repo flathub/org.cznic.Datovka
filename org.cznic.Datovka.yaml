@@ -4,7 +4,7 @@ sdk: org.kde.Sdk
 runtime-version: '5.14'
 command: datovka
 rename-desktop-file: datovka.desktop
-rename-appdata-file: datovka.appdata.xml
+rename-appdata-file: datovka.metainfo.xml
 rename-icon: datovka
 
 finish-args:
@@ -43,8 +43,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.15.0/datovka-4.15.0.tar.xz
-          sha256: 2123ad7ef3b645868d6bcb5a2213f2d5107f45229dcc787124c3abe82d0e61b8
+          url: https://secure.nic.cz/files/datove_schranky/4.15.1/datovka-4.15.1.tar.xz
+          sha256: 795ca1eaff172a6826b60430916aa0d9ff29cac8aac868a5631de76f72d06129
         - type: patch
           path: datovka.patch
         - type: patch
