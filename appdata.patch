@@ -1,5 +1,5 @@
---- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003323 +0200
-+++ datovka.metainfo.xml	2020-06-11 12:13:32.609485184 +0200
+--- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
++++ datovka.metainfo.xml	2020-08-28 18:37:25.605180661 +0200
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,11 +20,45 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,212 @@
+@@ -63,4 +69,246 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.15.2" type="stable" date="2020-08-27" urgency="low">
++			<description>
++				<p>
++				Enhancements:
++				</p>
++				<ul>
++					<li>A dialog with a notification that the message is going to be sent can be disabled</li>
++					<li>A time period before an attempt to download a freshly sent message was added</li>
++				</ul>
++				<p>
++				Bug fixes:
++				</p>
++				<ul>
++					<li>You can add items which have blank names and addresses to the list of recipients</li>
++					<li>Fixed erratic code for conversion of some ISDS values</li>
++					<li>After synchronisation with the shadow account takes place the account name is filled in the message for the service.</li>
++				</ul>
++				<p xml:lang="cs">
++				Vylepšení:
++				</p>
++				<ul xml:lang="cs">
++					<li>Dialog s upozorněním, že se bude odesílat poštovní datová zpráva, lze vypnout</li>
++					<li>Přidána krátká časová prodleva před pokusem o stažení čerstvě odeslané zprávy</li>
++				</ul>
++				<p xml:lang="cs">
++				Opravy chyb:
++				</p>
++				<ul xml:lang="cs">
++					<li>Do seznamu příjemců datové zprávy lze přidávat položky, které mají prázdné jméno nebo adresu</li>
++					<li>Opraven chybný kód pro konverzi některých hodnot ISDS</li>
++					<li>Po proběhnutí synchronizace stínovým účtem je ve zprávě pro spisovou službu vyplněn název odpovídajícího účtu</li>
++				</ul>
++			</description>
++		</release>	
 +		<release version="4.15.1" type="stable" date="2020-06-10" urgency="low">
 +			<description>
 +				<p>
