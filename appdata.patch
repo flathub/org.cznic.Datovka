@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2020-08-28 18:37:25.605180661 +0200
++++ datovka.metainfo.xml	2020-09-15 16:57:35.938986851 +0200
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,11 +20,21 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,246 @@
+@@ -63,4 +69,256 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.15.3" type="stable" date="2020-09-15" urgency="medium">
++			<description>
++				<p>
++				Enhancements: Certificate PostSignum Qualified CA 4 added to verify signatures of messages
++				</p>
++				<p xml:lang="cs">
++				Vylepšení: Přidán certifikát PostSignum Qualified CA 4 pro ověřování podpisů datových zpráv.
++				</p>
++			</description>
++		</release>
 +		<release version="4.15.2" type="stable" date="2020-08-27" urgency="low">
 +			<description>
 +				<p>
