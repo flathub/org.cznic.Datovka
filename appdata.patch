@@ -1,4 +1,4 @@
---- /deployment/datovka-orig.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
+--- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
 +++ datovka.metainfo.xml	2020-10-13 16:45:30.360285657 +0200
 @@ -31,6 +31,9 @@
  		<p>
