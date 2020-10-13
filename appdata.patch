@@ -1,5 +1,5 @@
---- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2020-09-15 16:57:35.938986851 +0200
+--- /deployment/datovka-orig.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
++++ datovka.metainfo.xml	2020-10-13 16:45:30.360285657 +0200
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,11 +20,21 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,256 @@
+@@ -63,4 +69,266 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.15.4" type="stable" date="2020-10-13" urgency="low">
++			<description>
++				<p>
++				Bug fixes: The order of control elements in the dialog for creating and sending messages has been changed.
++				</p>
++				<p xml:lang="cs">
++				Upraveno pořadí výběru ovládacích prvků v okně pro vytvoření a odeslání datové zprávy.
++				</p>
++			</description>
++		</release>
 +		<release version="4.15.3" type="stable" date="2020-09-15" urgency="medium">
 +			<description>
 +				<p>
