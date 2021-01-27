@@ -1,7 +1,7 @@
 app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '5.14'
+runtime-version: '5.15'
 command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.metainfo.xml
@@ -28,23 +28,26 @@ modules:
           url: https://gitlab.gnome.org/GNOME/libxml2/-/archive/v2.9.10/libxml2-v2.9.10.tar.bz2
           sha256: 5f1cc19c849cccabb983881cf1ebf833f42db5d7b8afba7a7763a2ac3101715c
 
-  - name: libisds
+  - name: libdatovka
     config-opts:
         - --disable-doc
     sources:
         - type: archive
-          url: http://xpisar.wz.cz/libisds/dist/libisds-0.11.1.tar.bz2
-          sha256: 037c11df6b48b4d513774cc586bf173cb5df0515cf66b9ec02fb5308c1ee01df
+          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.1.0.tar.xz
+          sha256: a3fd28ef44bdc52ded29ba0a556af0cde1155f7eedcb895d586a260bdc81d25e
 
   - name: datovka
     buildsystem: qmake
+    build-options:
+        env:
+            PKG_CONFIG_PATH: "/app/lib/pkgconfig"
     post-install:
         - mv /app/bin/datovka /app/bin/datovka-run
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.15.4/datovka-4.15.4.tar.xz
-          sha256: de577967da3a5bd3d6c23a78e967b2668cac5ef3719286997f83a577533af219
+          url: https://secure.nic.cz/files/datove_schranky/4.16.0/datovka-4.16.0.tar.xz
+          sha256: a1d2ddeb3f517744108b4a89f6d184e72030e03d118fa926b6bdf1b3a489c1bb
         - type: patch
           path: datovka.patch
         - type: patch

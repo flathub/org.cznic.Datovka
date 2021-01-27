@@ -1,16 +1,15 @@
 diff --git a/datovka.pro b/datovka.pro
-index 9d11b95..67d947b 100644
+index cc228e2..44fb638 100644
 --- a/datovka.pro
 +++ b/datovka.pro
-@@ -128,8 +128,9 @@ QMAKE_CXXFLAGS = \
-
+@@ -134,8 +134,8 @@ QMAKE_CXXFLAGS = \
+ 
  #INCLUDEPATH +=
-
+ 
 -LIBS = \
--	-lisds
-+LIBS += \
-+	`pkg-config --libs libisds` \
-+	-lgpgme -lgcrypt
-
+-	-ldatovka
++CONFIG += link_pkgconfig
++PKGCONFIG += libdatovka
+ 
  isEqual(WITH_BUILT_LIBS, 1) {
  	warning(Linking with locally built libraries.)

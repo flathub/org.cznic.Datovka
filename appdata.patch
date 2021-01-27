@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2020-10-13 16:45:30.360285657 +0200
++++ datovka.metainfo.xml	2021-01-27 10:36:07.401934395 +0100
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,11 +20,50 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,266 @@
+@@ -63,4 +69,305 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.16.0" type="stable" date="2021-01-26" urgency="medium">
++			<description>
++				<p xml:lang="cs">
++				New features:
++				</p>
++				<ul xml:lang="cs">
++					<li>For communication with ISDS libdatovka is now used instead of libisds</li>
++					<li>Ability to administrate other users if they agree with it was added</li>
++				</ul>
++				<p xml:lang="cs">
++				Enhancements: Keyboard navigation in the menu items in the backup/restore window.
++				</p>
++				<p xml:lang="cs">
++				Bug fixes:
++				</p>
++				<ul xml:lang="cs">
++					<li>Problem with sorting text items in tables when Czech is not set as the app language was fixed</li>
++					<li>Error which can cause an app crash during repeated fulltext search in data boxes was fixed</li>
++				</ul>
++				<p xml:lang="cs">
++				New features:
++				</p>
++				<ul xml:lang="cs">
++					<li>For communication with ISDS libdatovka is now used instead of libisds</li>
++					<li>Ability to administrate other users if they agree with it was added</li>
++				</ul>
++				<p xml:lang="cs">
++				Enhancements: Keyboard navigation in the menu items in the backup/restore window.
++				</p>
++				<p xml:lang="cs">
++				Bug fixes:
++				</p>
++				<ul xml:lang="cs">
++					<li>Problem with sorting text items in tables when Czech is not set as the app language was fixed</li>
++					<li>Error which can cause an app crash during repeated fulltext search in data boxes was fixed</li>
++				</ul>
++			</description>
++		</release>
++				
 +		<release version="4.15.4" type="stable" date="2020-10-13" urgency="low">
 +			<description>
 +				<p>
