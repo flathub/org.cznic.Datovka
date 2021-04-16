@@ -33,8 +33,8 @@ modules:
         - --disable-doc
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.1.0.tar.xz
-          sha256: a3fd28ef44bdc52ded29ba0a556af0cde1155f7eedcb895d586a260bdc81d25e
+          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.1.2.tar.xz
+          sha256: da6496abc6a63482ac8163b564457db90547cef7a1e9d126738171daf05cdd31
 
   - name: datovka
     buildsystem: qmake
@@ -46,8 +46,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.16.0/datovka-4.16.0.tar.xz
-          sha256: a1d2ddeb3f517744108b4a89f6d184e72030e03d118fa926b6bdf1b3a489c1bb
+          url: https://secure.nic.cz/files/datove_schranky/4.17.0/datovka-4.17.0.tar.xz
+          sha256: a86477105a4b69c8958bd65d1895f2d693131763fe7d04074bd8d76313d96864
         - type: patch
           path: datovka.patch
         - type: patch
