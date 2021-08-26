@@ -9,7 +9,7 @@ rename-icon: datovka
 
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --share=network
   - --device=dri
@@ -25,16 +25,16 @@ modules:
         - --without-python
     sources:
         - type: archive
-          url: https://gitlab.gnome.org/GNOME/libxml2/-/archive/v2.9.10/libxml2-v2.9.10.tar.bz2
-          sha256: 5f1cc19c849cccabb983881cf1ebf833f42db5d7b8afba7a7763a2ac3101715c
+          url: https://gitlab.gnome.org/GNOME/libxml2/-/archive/v2.9.11/libxml2-v2.9.11.tar.bz2
+          sha256: 8686275678f4b91cf4d5d7a880d6ebc671c3b7824fdf37ddd52faa2c938400e8
 
   - name: libdatovka
     config-opts:
         - --disable-doc
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.1.2.tar.xz
-          sha256: da6496abc6a63482ac8163b564457db90547cef7a1e9d126738171daf05cdd31
+          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.2.0.tar.xz
+          sha256: 2c8835e30a4dac61d91596a9bc45ea5a53ea478855396388f66819c1444c3611
 
   - name: datovka
     buildsystem: qmake
@@ -46,8 +46,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.17.0/datovka-4.17.0.tar.xz
-          sha256: a86477105a4b69c8958bd65d1895f2d693131763fe7d04074bd8d76313d96864
+          url: https://secure.nic.cz/files/datove_schranky/4.18.0/datovka-4.18.0.tar.xz
+          sha256: 5d57112450532be66f1c14efaa909ab71c3c34e123a2201393cd0b144808d8ef
         - type: patch
           path: datovka.patch
         - type: patch

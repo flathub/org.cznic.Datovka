@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2021-04-16 10:45:21.475150419 +0200
++++ datovka.metainfo.xml	2021-08-26 15:19:06.161749525 +0200
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,11 +20,62 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,330 @@
+@@ -63,4 +69,381 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.18.0" type="stable" date="2021-08-26" urgency="medium">
++			<description>
++				<p>
++				New features:
++				</p>
++				<ul>
++					<li>If there are more options to pay for databox messages available, it's now possible to choose from them</li>
++				</ul>
++				<p>
++				Enhancements:
++				</p>
++				<ul>
++					<li>While editing tags the changes show up in the views</li>
++					<li>Saving downloaded messages to the database is faster</li>
++					<li>Datovka is able to work with time information even after 2038</li>
++				</ul>
++				<p>
++				Bug fixes:
++				</p>
++				<ul>
++					<li>Smaller memory consumption while processing databox messages</li>
++					<li>Fixed issue with deleting entries from database when removing user accounts</li>
++					<li>Fixed issue with wrong identification of MIME type of ISDOC attachments when sending databox messages</li>
++				</ul>
++				
++				<p xml:lang="cs">
++				Nové vlastnosti:
++				</p>
++				<ul xml:lang="cs">
++					<li>Pokud existuje více možností platby za poštovní datovou zprávu, je uživateli při odesílání datové zprávy umožněn výběr způsobu platby</li>
++				</ul>
++				<p xml:lang="cs">
++				Vylepšení:
++				</p>
++				<ul xml:lang="cs">
++					<li>Při editaci tagů se jejich změny zobrazují ve výpisech, kde se vyskytují</li>
++					<li>Zrychleno ukládání stahovaných datových zpráv do databáze</li>
++					<li>U ručně stahovaných datových zpráv jsou ověřovány jejich identifikátory a v případě shody jsou automaticky nahrávány do spisové služby, je-li nastavena spisová služba</li>
++					<li>Datovka je schopna pracovat s časovými údaji i po roce 2038</li>
++				</ul>
++				<p>
++				Opravy chyb:
++				</p>
++				<ul xml:lang="cs">
++					<li>Snížena spotřeba paměti při zpracování datových zpráv</li>
++					<li>Opravena chyba při mazání záznamů z databáze během odstraňování uživatelských účtů</li>
++					<li>Opravena chybná identifikace MIME typu příloh ISDOC při odesílání datových zpráv</li>
++				</ul>
++			</description>
++		</release>
++	
 +		<release version="4.17.0" type="stable" date="2021-04-15" urgency="medium">
 +			<description>
 +				<p>
