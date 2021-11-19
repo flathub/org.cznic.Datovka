@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2021-08-26 15:19:06.161749525 +0200
++++ datovka.metainfo.xml	2021-11-19 10:37:19.965807715 +0100
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,11 +20,59 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,381 @@
+@@ -63,4 +69,429 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++		<release version="4.19.0" type="stable" date="2021-11-16" urgency="medium">
++			<description>
++				<p>
++				New features:
++				</p>
++				<ul>
++					<li>It is posssible to enable color highlighting for messages that have been marked by the user as to be deleted on the ISDS server</li>
++				</ul>
++				<p>
++				Enhancements:
++				</p>
++				<ul>
++					<li>Old code has been replaced. The app can be compiled with Qt 6</li>
++					<li>Dialogs to inform about successful saving of messages to records management are no longer shown. This information is notified by an icon in the list of messages</li>
++				</ul>
++				<p>
++				Bug fixes:
++				</p>
++				<ul>
++					<li>Saved message envelopes are updated if the message type is changed</li>
++					<li>An issue with conversion of time data when time data could be rounded to hours shortly after midnight has been fixed</li>
++					<li>Memory leaks when starting the app have been fixed</li>
++				</ul>
++				
++				<p xml:lang="cs">
++				Nové vlastnosti:
++				</p>
++				<ul xml:lang="cs">
++					<li>Lze zapnout volitelné barevné zvýraznění datových zpráv, které budou v uživatelem nastavené době smazány ze serveru ISDS</li>
++				</ul>
++				<p xml:lang="cs">
++				Vylepšení:
++				</p>
++				<ul xml:lang="cs">
++					<li>Nahrazen zastaralý kód. Aplikace lze překládat s pomocí Qt-6</li>
++					<li>Dialogy upozorňující na úspěšné nahrání zpráv do spisové služby se již záměrně nezobrazují. Tato informace je indikována pouze zobrazenou ikonou v seznamu zpráv</li>
++				</ul>
++				<p>
++				Opravy chyb:
++				</p>
++				<ul xml:lang="cs">
++					<li>Uložené obálky zpráv jsou aktualizovány pokud dojde ke změně typu poštovní datové zprávy. Například, když je spotřebována iniciační PDZ</li>
++					<li>Opravena chyba v konverzi časových údajů, kdy časové údaje krátce po půlnoci mohly být zarovnány na celé hodiny</li>
++					<li>Opraveny úniky paměti při spouštění aplikace</li>
++				</ul>
++			</description>
++		</release>
++		
 +		<release version="4.18.0" type="stable" date="2021-08-26" urgency="medium">
 +			<description>
 +				<p>
