@@ -1,7 +1,7 @@
 app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '5.15'
+runtime-version: '6.2'
 command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.metainfo.xml
@@ -25,8 +25,8 @@ modules:
         - --without-python
     sources:
         - type: archive
-          url: https://gitlab.gnome.org/GNOME/libxml2/-/archive/v2.9.12/libxml2-v2.9.12.tar.bz2
-          sha256: bb5ea084617e2bc706cd1f0c9b36328950c9d802a16ff52795e5f13bae900ca8
+          url: https://download.gnome.org/sources/libxml2/2.9/libxml2-2.9.13.tar.xz
+          sha256: 276130602d12fe484ecc03447ee5e759d0465558fbc9d6bd144e3745306ebf0e
 
   - name: libdatovka
     config-opts:
@@ -46,8 +46,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.19.0/datovka-4.19.0.tar.xz
-          sha256: 14f27bb1f313ee818e1c4aaa246925b8f548918c70f351495df7c9385db27b6e
+          url: https://secure.nic.cz/files/datove_schranky/4.20.0/datovka-4.20.0.tar.xz
+          sha256: 84c6e00edbd1b6fbb61126a3718842570e48e5895b97818d99b2f56f79a7a45d
         - type: patch
           path: datovka.patch
         - type: patch

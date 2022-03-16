@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2021-11-19 10:37:19.965807715 +0100
++++ datovka.metainfo.xml	2022-03-16 11:05:34.580169003 +0100
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,11 +20,58 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,429 @@
+@@ -63,4 +69,475 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
++	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++		<release version="4.20.0" type="stable" date="2022-03-16" urgency="medium">
++			<description>
++				<p>
++				New features:
++				</p>
++				<ul>
++					<li>The application is able to generate a PDF attachment from a short text written by the user</li>
++				</ul>
++				<p>
++				Enhancements:
++				</p>
++				<ul>
++					<li>The code for handling data in JSON for communication with records management has been rewritten</li>
++					<li>The comunnication with records management has been altered. The number of queries to the records management server has been lowered when automatically uploading data messages to records management</li>
++				</ul>
++				<p>
++				Bug fixes:
++				</p>
++				<ul>
++					<li>Processing prefixes of multi-line logs has been fixed</li>
++					<li>Fixed bug in communication with records management server which could lead to an application crash during heavy communication exchange</li>
++					<li>Fixed bug in processing information from records management server which could lead to not showing the state of message uploading in the message view</li>
++				</ul>
++				<p xml:lang="cs">
++				Nové vlastnosti:
++				</p>
++				<ul xml:lang="cs">
++					<li>Aplikace dovoluje vygenerovat přílohu datové zprávy ve formátu PDF z uživatelem zadaného krátkého textu</li>
++				</ul>
++				<p xml:lang="cs">
++				Vylepšení:
++				</p>
++				<ul xml:lang="cs">
++					<li>Přepsán kód pro práci s daty ve formátu JSON pro komunikaci se spisovou službou</li>
++					<li>Upraven způsob komunikace se spisovou službou. Byl snížen počet dotazů na server spisové služby při automatickém nahrávání datových zpráv do spisové služby</li>
++				</ul>
++				<p xml:lang="cs">
++				Opravy chyb:
++				</p>
++				<ul xml:lang="cs">
++					<li>Opraveno zpracování prefixů víceřádkových záznamů v logu aplikace</li>
++					<li>Opravena chyba v komunikaci se serverem spisové služby, které mohla vést k pádu aplikace při intenzivní komunikaci se serverem spisové služby</li>
++					<li>Opravena chyba ve zpracování informací se serveru spisové služby, která mohla vést k nezobrazení stavu o nahrání zprávy do spisové služby v přehledu zpráv</li>
++				</ul>
++			</description>
++		</release>
 +		<release version="4.19.0" type="stable" date="2021-11-16" urgency="medium">
 +			<description>
 +				<p>
@@ -48,7 +95,6 @@
 +					<li>An issue with conversion of time data when time data could be rounded to hours shortly after midnight has been fixed</li>
 +					<li>Memory leaks when starting the app have been fixed</li>
 +				</ul>
-+				
 +				<p xml:lang="cs">
 +				Nové vlastnosti:
 +				</p>
@@ -62,14 +108,14 @@
 +					<li>Nahrazen zastaralý kód. Aplikace lze překládat s pomocí Qt-6</li>
 +					<li>Dialogy upozorňující na úspěšné nahrání zpráv do spisové služby se již záměrně nezobrazují. Tato informace je indikována pouze zobrazenou ikonou v seznamu zpráv</li>
 +				</ul>
-+				<p>
++				<p xml:lang="cs">
 +				Opravy chyb:
 +				</p>
 +				<ul xml:lang="cs">
 +					<li>Uložené obálky zpráv jsou aktualizovány pokud dojde ke změně typu poštovní datové zprávy. Například, když je spotřebována iniciační PDZ</li>
 +					<li>Opravena chyba v konverzi časových údajů, kdy časové údaje krátce po půlnoci mohly být zarovnány na celé hodiny</li>
 +					<li>Opraveny úniky paměti při spouštění aplikace</li>
-+				</ul>
++				</ul>				
 +			</description>
 +		</release>
 +		
