@@ -1,7 +1,7 @@
 app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '6.2'
+runtime-version: '6.3'
 command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.metainfo.xml
@@ -21,29 +21,44 @@ modules:
         - --without-python
     sources:
         - type: archive
-          url: https://download.gnome.org/sources/libxml2/2.9/libxml2-2.9.13.tar.xz
-          sha256: 276130602d12fe484ecc03447ee5e759d0465558fbc9d6bd144e3745306ebf0e
+          url: https://download.gnome.org/sources/libxml2/2.9/libxml2-2.9.14.tar.xz
+          sha256: 60d74a257d1ccec0475e749cba2f21559e48139efba6ff28224357c7c798dfee
 
   - name: libdatovka
     config-opts:
         - --disable-doc
+        - --disable-static
     sources:
         - type: archive
           url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.2.1.tar.xz
           sha256: 12735207c2ab7c2ce0ce342884dab3ce32b9cded84e529ba7ce072f68ac05fda
 
+  - name: qt5compat
+    buildsystem: cmake-ninja
+    cleanup-platfom: /bin
+    post-install:
+        - "ln -sr ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/libQt*.so* -t ${FLATPAK_DEST}/lib/"
+    sources:
+        - type: archive
+          url: https://download.qt.io/official_releases/qt/6.3/6.3.2/submodules/qt5compat-everywhere-src-6.3.2.tar.xz
+          sha256: 91a3ac0f3f87e4103afa5834ccbecff9374daf716fab362d0c5e2d6ab98560cc
+
+  - name: quazip
+    buildsystem: cmake-ninja
+    sources:
+        - type: archive
+          url: https://github.com/stachenov/quazip/archive/refs/tags/v1.3.tar.gz
+          sha256: c1239559cd6860cab80a0fd81f4204e606f9324f702dab6166b0960676ee1754
+
   - name: datovka
     buildsystem: qmake
-    build-options:
-        env:
-            PKG_CONFIG_PATH: "/app/lib/pkgconfig"
     post-install:
         - mv /app/bin/datovka /app/bin/datovka-run
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.20.0/datovka-4.20.0.tar.xz
-          sha256: 84c6e00edbd1b6fbb61126a3718842570e48e5895b97818d99b2f56f79a7a45d
+          url: https://secure.nic.cz/files/datove_schranky/4.21.0/datovka-4.21.0.tar.xz
+          sha256: 2ce364735147a2f20bb385e657d631a93c4f7dcd293198cb00fd73f22fe3b277
         - type: patch
           path: datovka.patch
         - type: patch
