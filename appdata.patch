@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2022-09-29 10:35:32.849725423 +0200
++++ datovka.metainfo.xml	2022-11-29 14:03:01.941937717 +0100
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,12 +20,47 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,535 @@
+@@ -63,4 +69,570 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++	  <release version="4.21.1" type="stable" date="2022-11-22" urgency="medium">
++	    <description>
++	      <p>
++	      Enhancements:
++	      </p>
++	      <ul>
++	        <li>The application tries to exit as quickly as possible in a controlled manner when it receives an exit request from the operating system (e.g. when logging out or shutting down)</li>
++	        <li>Přidáno časové omezení při vyhledávání zpráv, které nejsou ve spisové službě. Seznam zpráv je možné exportovat do CSV souboru</li>
++	      </ul>
++	      <p>
++	      Bug fixes:
++	      </p>
++	      <ul>
++	        <li>Fixed a bug that caused windows with a parsed data message to not close when shutting down the application</li>
++	        <li>Fixed bug with occasional application freezing on shutdown when closing worker threads</li>
++	        <li>Uploading backups that do not have an account identifier is allowed</li>
++	      </ul>
++	      <p xml:lang="cs">
++	      Vylepšení:
++	      </p>
++	      <ul xml:lang="cs">
++	        <li>Aplikace se snaží co nejrychleji řízeně ukončit svou činnost, když obdrží od operačního systému požadavek na ukončení (např. při odhlášení nebo vypínání)</li>
++	        <li>Přidáno časové omezení při vyhledávání zpráv, které nejsou ve spisové službě. Seznam zpráv je možné exportovat do CSV souboru</li>
++	      </ul>
++	      <p xml:lang="cs">
++	      Opravy chyb
++	      </p>
++	      <ul xml:lang="cs">
++	        <li>Opravena chyba, která způsobila nezavření oken s rozepsanou datovou zprávou při vypínání aplikace</li>
++	        <li>Opravena chyba s občasným zamrznutím aplikace při vypínání, když se ukončovala pracovní vlákna</li>
++	        <li>Je dovoleno nahrávání záloh, které nemají identifikátor účtu</li>
++	      </ul>
++	    </description>
++	  </release>
++	  
 +    <release version="4.21.0" type="stable" date="2022-09-27" urgency="medium">
 +      <description>
 +        <p>
