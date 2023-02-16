@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2023-02-16 10:37:42.754882355 +0100
++++ datovka.metainfo.xml	2023-02-16 11:08:26.229198947 +0100
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,7 +20,7 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,587 @@
+@@ -63,4 +69,589 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
@@ -33,6 +33,7 @@
 +	      </p>
 +	      <ul>
 +	        <li>When sending a data message, the user can specify what information about his or her person he or she wants to disclose to the recipient of the data message</li>
++	      </ul>
 +	        <li>Added support for the PFO_REQ databox type</li>
 +	      <p xml:lang="cs">
 +	      Nové vlastnosti:
@@ -40,6 +41,7 @@
 +	      <ul xml:lang="cs">
 +	        <li>Uživatel může při odesílání datové zprávy určit, jaké informace o své osobě chce zveřejnit pro příjemce datové zprávy</li>
 +	        <li>Přidána podpora pro typ datové schránky PFO_REQ</li>
++	      </ul>
 +	    </description>
 +	  </release>
 +	  
