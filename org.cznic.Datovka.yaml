@@ -30,8 +30,8 @@ modules:
         - --disable-static
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.2.1.tar.xz
-          sha256: 12735207c2ab7c2ce0ce342884dab3ce32b9cded84e529ba7ce072f68ac05fda
+          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.3.0.tar.xz
+          sha256: c69905a1be69774a6956a8145c1631d453de162caaef1769c692501c2340261b
 
   - name: qt5compat
     buildsystem: cmake-ninja
@@ -57,8 +57,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.21.1/datovka-4.21.1.tar.xz
-          sha256: f0ec25d0d19d8a56b806a2ef432c9aefb65db3d6b433f0e0cec4c4abcd2ef06c
+          url: https://secure.nic.cz/files/datove_schranky/4.22.0/datovka-4.22.0.tar.xz
+          sha256: 4390b04a3308041d668b792c276a497f492f84013644fcc66653d4480bc19489
         - type: patch
           path: datovka.patch
         - type: patch
