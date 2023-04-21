@@ -1,6 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
 +++ datovka.metainfo.xml	2023-04-21 11:24:30.356006283 +0200
-
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -21,9 +20,7 @@
  	</description>
  
  	<kudos>
-
 @@ -63,4 +69,607 @@
-
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
