@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2023-02-16 11:16:28.592666997 +0100
++++ datovka.metainfo.xml	2023-04-21 11:24:30.356006283 +0200
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,12 +20,30 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,589 @@
+@@ -63,4 +69,607 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++	  <release version="4.22.1" type="stable" date="2023-04-19" urgency="low">
++	    <description>
++	      <p>
++	      Enhancements:
++	      </p>
++	      <ul>
++	        <li>When collapsing nodes with account names in the left column in the account list, the number of unread recently received messages is displayed</li>
++	      </ul>
++	      <p>
++	      Vylepšení:
++	      </p>
++	      <ul>
++	        <li>
++    Při sbalení uzlů se jmény účtů v levém sloupci v seznamu účtů je zobrazen počet nepřečtených nedávno přijatých zpráv.</li>
++	      </ul>
++	    </description>
++	  </release>
++	  
 +	  <release version="4.22.0" type="stable" date="2023-02-15" urgency="low">
 +	    <description>
 +	      <p>
