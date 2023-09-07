@@ -1,7 +1,7 @@
 app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '6.3'
+runtime-version: '6.4'
 command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.metainfo.xml
