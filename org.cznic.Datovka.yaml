@@ -1,7 +1,7 @@
 app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '6.4'
+runtime-version: '6.5'
 command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.metainfo.xml
@@ -40,15 +40,15 @@ modules:
         - "ln -sr ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/libQt*.so* -t ${FLATPAK_DEST}/lib/"
     sources:
         - type: archive
-          url: https://download.qt.io/official_releases/qt/6.3/6.3.2/submodules/qt5compat-everywhere-src-6.3.2.tar.xz
-          sha256: 91a3ac0f3f87e4103afa5834ccbecff9374daf716fab362d0c5e2d6ab98560cc
+          url: https://download.qt.io/official_releases/qt/6.5/6.5.2/submodules/qt5compat-everywhere-src-6.5.2.tar.xz
+          sha256: b9abe42ee2055c27a8e7579c7816069e91aae1f9b10649bf572db8ba96fa91c4
 
   - name: quazip
     buildsystem: cmake-ninja
     sources:
         - type: archive
-          url: https://github.com/stachenov/quazip/archive/refs/tags/v1.3.tar.gz
-          sha256: c1239559cd6860cab80a0fd81f4204e606f9324f702dab6166b0960676ee1754
+          url: https://github.com/stachenov/quazip/archive/refs/tags/v1.4.tar.gz
+          sha256: 79633fd3a18e2d11a7d5c40c4c79c1786ba0c74b59ad752e8429746fe1781dd6
 
   - name: datovka
     buildsystem: qmake
