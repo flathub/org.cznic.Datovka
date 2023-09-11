@@ -1,47 +1,42 @@
+diff --git a/config.tests/libdatovka/libdatovka.pro b/config.tests/libdatovka/libdatovka.pro
+index 6b32965b..6ffada6d 100644
+--- a/config.tests/libdatovka/libdatovka.pro
++++ b/config.tests/libdatovka/libdatovka.pro
+@@ -15,8 +15,8 @@ greaterThan(QT_MAJOR_VERSION, 5) {
 
+ #INCLUDEPATH +=
 
-        diff --git a/config.tests/libdatovka/libdatovka.pro b/config.tests/libdatovka/libdatovka.pro
-        index 6b32965b..6ffada6d 100644
-        --- a/config.tests/libdatovka/libdatovka.pro
-        +++ b/config.tests/libdatovka/libdatovka.pro
-        @@ -15,8 +15,8 @@ greaterThan(QT_MAJOR_VERSION, 5) {
-         
-         #INCLUDEPATH +=
-         
-        -LIBS = \
-        -       -ldatovka
-        +CONFIG += link_pkgconfig
-        +PKGCONFIG += libdatovka gpgme
-         
-         unix:!macx {
-                # Some users of yet another obscure Linux distro were
-        diff --git a/datovka.pro b/datovka.pro
-        index 8687b017..16f9d7f2 100644
-        --- a/datovka.pro
-        +++ b/datovka.pro
-        @@ -163,8 +163,8 @@ QMAKE_CXXFLAGS += \
-         
-         #INCLUDEPATH +=
-         
-        -LIBS = \
-        -       -ldatovka
-        +CONFIG += link_pkgconfig
-        +PKGCONFIG += libdatovka gpgme
-         
-         isEqual(WITH_BUILT_LIBS, 1) {
-                warning(Linking with locally built libraries.)
-        @@ -191,9 +191,8 @@ isEqual(WITH_BUILT_LIBS, 1) {
-                CONFIG(config_libdatovka) {
-                        # Can do something here.
-                }
-        -       qtCompileTest(libquazip) {
-        -               SYSTEM_LIBQUAZIP = 1
-        -       }
-        +
-        +        SYSTEM_LIBQUAZIP = 1
-         }
-         
-         isEqual(STATIC, 1) {
-         
+-LIBS = \
+-	-ldatovka
++CONFIG += link_pkgconfig
++PKGCONFIG += libdatovka gpgme
 
+ unix:!macx {
+ 	# Some users of yet another obscure Linux distro were
+diff --git a/datovka.pro b/datovka.pro
+index 8687b017..16f9d7f2 100644
+--- a/datovka.pro
++++ b/datovka.pro
+@@ -163,8 +163,8 @@ QMAKE_CXXFLAGS += \
 
+ #INCLUDEPATH +=
+
+-LIBS = \
+-	-ldatovka
++CONFIG += link_pkgconfig
++PKGCONFIG += libdatovka gpgme
+
+ isEqual(WITH_BUILT_LIBS, 1) {
+ 	warning(Linking with locally built libraries.)
+@@ -191,9 +191,8 @@ isEqual(WITH_BUILT_LIBS, 1) {
+ 	CONFIG(config_libdatovka) {
+ 		# Can do something here.
+ 	}
+-	qtCompileTest(libquazip) {
+-		SYSTEM_LIBQUAZIP = 1
+-	}
++
++        SYSTEM_LIBQUAZIP = 1
+ }
+
+ isEqual(STATIC, 1) {
