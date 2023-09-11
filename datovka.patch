@@ -1,31 +1,31 @@
 diff --git a/config.tests/libdatovka/libdatovka.pro b/config.tests/libdatovka/libdatovka.pro
-index 6b32965b..cba0f8d0 100644
+index 6b32965b..6ffada6d 100644
 --- a/config.tests/libdatovka/libdatovka.pro
 +++ b/config.tests/libdatovka/libdatovka.pro
 @@ -15,8 +15,8 @@ greaterThan(QT_MAJOR_VERSION, 5) {
- 
+
  #INCLUDEPATH +=
- 
+
 -LIBS = \
 -	-ldatovka
 +CONFIG += link_pkgconfig
-+PKGCONFIG += libdatovka
- 
++PKGCONFIG += libdatovka gpgme
+
  unix:!macx {
  	# Some users of yet another obscure Linux distro were
 diff --git a/datovka.pro b/datovka.pro
-index c252441c..26076ca3 100644
+index 8687b017..16f9d7f2 100644
 --- a/datovka.pro
 +++ b/datovka.pro
 @@ -163,8 +163,8 @@ QMAKE_CXXFLAGS += \
- 
+
  #INCLUDEPATH +=
- 
+
 -LIBS = \
 -	-ldatovka
 +CONFIG += link_pkgconfig
-+PKGCONFIG += libdatovka
- 
++PKGCONFIG += libdatovka gpgme
+
  isEqual(WITH_BUILT_LIBS, 1) {
  	warning(Linking with locally built libraries.)
 @@ -191,9 +191,8 @@ isEqual(WITH_BUILT_LIBS, 1) {
@@ -38,15 +38,5 @@ index c252441c..26076ca3 100644
 +
 +        SYSTEM_LIBQUAZIP = 1
  }
- 
+
  isEqual(STATIC, 1) {
-@@ -415,7 +414,8 @@ isEqual(SYSTEM_LIBQUAZIP, 1) {
- 	INCLUDEPATH += \
- 	    $${QUAZIP_INCLUDEPATH}
- 	LIBS += \
--	    $${QUAZIP_LIBS}
-+	    $${QUAZIP_LIBS} \
-+	    -lQt6Core5Compat
- } else {
- 	BUNDLED_QUAZIP = 1
- }
