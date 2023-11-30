@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2023-04-21 11:24:30.356006283 +0200
++++ datovka.metainfo.xml	2023-11-30 10:55:15.731228296 +0100
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,12 +20,64 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,607 @@
+@@ -63,4 +69,659 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++	  <release version="4.23.0" date="2023-11-28">
++      <description>
++        <p>
++        New features:
++        </p>
++        <ul>
++          <li>Support for high-volume data messages (VoDZ).</li>
++          <li>Added support for data box types PFO_ARCH, PFO_AIAT, and PFO_AZI.</li>
++          <li>Memory of dialog window sizes, control element positions, column widths, and item sorting in tables.</li>
++          <li>Configurable content of the toolbar in the main window.</li>
++          <li>For macOS, a package with a native application for Arm processors is available.</li>
++        </ul>
++     
++        <p>
++        Improvements:
++        </p>
++        <ul>
++          <li>Extended parameter list for generating names of exported files.</li>
++        </ul>
++        <p>
++        Bug fixes:
++        </p>      
++        <ul>
++          <li>Fixed an issue in dark mode. Filter input fields now return to their original color when the filter is cleared.</li>
++          <li>Fixed a potential source of application freezing during data writing.</li>
++        </ul>
++        <p xml:lang="cs">
++        Nové vlastnosti:
++        </p>
++        <ul xml:lang="cs">
++          <li>Podpora pro velkoobjemové datové zprávy (VoDZ).</li>
++          <li>Přidána podpora pro typy datových schránek PFO_ARCH, PFO_AIAT a PFO_AZI.</li>
++          <li>Pamatování velikosti dialogových oken, pozice ovládacích prvků, šířek sloupců a řazení položek v tabulkách.</li>
++          <li>Konfigurovatelný obsah nástrojové lišty v hlavním okně.</li>
++          <li>Pro macOS je k dispozici balík s nativní aplikací pro počítače s procesory Arm.</li>
++        </ul>
++     
++        <p xml:lang="cs">
++        Vylepšení:
++        </p>
++        <ul xml:lang="cs">
++          <li>Rozšířen seznam parametrů pro generování jmen exportovaných souborů.</li>
++        </ul>
++        <p xml:lang="cs">
++        Opravy chyb:
++        </p>      
++        <ul xml:lang="cs">
++          <li>Opravena chyba v tmavém režimu. Pole pro zadávání filtrů se nyní vracejí do původního zabarvení, když je filtr smazán.</li>
++          <li>Opraven možný zdroj zamrznutí aplikace při zápisu dat.</li>
++        </ul>
++       </description>
++    </release>
 +	  <release version="4.22.1" type="stable" date="2023-04-19" urgency="low">
 +	    <description>
 +	      <p>
