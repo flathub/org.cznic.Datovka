@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2023-11-30 10:55:15.731228296 +0100
++++ datovka.metainfo.xml	2024-04-23 10:54:33.657269342 +0200
 @@ -31,6 +31,9 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -20,12 +20,32 @@
  	</description>
  
  	<kudos>
-@@ -63,4 +69,659 @@
+@@ -63,4 +69,679 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++	  <release version="4.23.7" date="2023-04-22">
++	  <description>
++	    <p>
++     Improvements:
++     </p>
++     <ul>
++       <li>A package with a 64-bit portable version is available for Windows.</li>
++       <li>Minor changes in some dialogs.</li>
++    </ul>
++    
++	    <p xml:lang="cs">
++      Vylepšení:
++      </p>
++      <ul xml:lang="cs">
++         <li>Pro Windows je k dispozici balík s 64bitovou přenosnou verzí.</li>
++         <li>Drobné změny v některých dialozích.</li>
++      </ul>
++     </description>
++     </release>
++
 +	  <release version="4.23.0" date="2023-11-28">
 +      <description>
 +        <p>
