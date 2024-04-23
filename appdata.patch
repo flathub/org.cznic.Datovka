@@ -1,26 +1,43 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2024-04-23 10:54:33.657269342 +0200
-@@ -31,6 +31,9 @@
++++ datovka.metainfo.xml	2024-04-23 11:27:07.028182874 +0200
+@@ -31,23 +31,31 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
  		</p>
-+		<p>
+-	</description>
+-	<description xml:lang="cs">
+ 		<p>
 +			This flatpak is not maintained by CZ.NIC, z.s.p.o.
 +		</p>
- 	</description>
- 	<description xml:lang="cs">
- 		<p>
-@@ -46,6 +49,9 @@
- 		<p>
++		<p  xml:lang="cs">
+ 			Datovka je multiplatformní desktopová aplikace pro přístup k datovým schránkám.
+ 			Datová schránka v České republice je elektronické úložiště, které je určeno
+ 			k doručování dokumentů a pro komunikaci s orgány veřejné moci.
+ 		</p>
+-		<p>
++		<p  xml:lang="cs">
+ 			Z Datovky je možné číst zprávy, odesílat zprávy, kontrolovat integritu datových zpráv,
+ 			exportovat doručenky i celé zprávy, exportovat přehled korespondence za určité
+ 			časové období, apod.
+ 		</p>
+-		<p>
++		<p  xml:lang="cs">
  			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
  		</p>
-+		<p>
++		<p  xml:lang="cs">
 +			Tento flatpak není spravovaný CZ.NIC, z.s.p.o.
 +		</p>
  	</description>
- 
+-
++	
++  <developer id="nic.cz">
++     <name>CZ.NIC</name>
++  </developer>
++  
  	<kudos>
-@@ -63,4 +69,679 @@
+ 		<kudo>HiDpiIcon</kudo>
+ 		<kudo>ModernToolkit</kudo>
+@@ -63,4 +71,679 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
