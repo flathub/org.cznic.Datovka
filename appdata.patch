@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2024-04-23 11:27:07.028182874 +0200
++++ datovka.metainfo.xml	2024-05-29 16:32:16.496764192 +0200
 @@ -31,23 +31,31 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -37,12 +37,31 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-@@ -63,4 +71,679 @@
+@@ -63,4 +71,698 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++	  <release version="4.23.8" date="2023-05-17">
++	  <description>
++	    <p>
++     Bug fixes:
++     </p>
++     <ul>
++       <li>The command line interface automatically detects whether to send a regular or bulk data message.</li>
++       <li>Fix for possible application crash when backing up data</li>
++    </ul>
++    
++	    <p xml:lang="cs">
++      Opravy chyb:
++      </p>
++      <ul xml:lang="cs">
++         <li>Rozhraní pro příkazovou řádku automaticky detekuje, zda se má odeslat běžná nebo velkoobjemová datová zpráva.</li>
++         <li>Oprava možného pádu aplikace při zálohování dat</li>
++      </ul>
++     </description>
++    </release>
 +	  <release version="4.23.7" date="2023-04-22">
 +	  <description>
 +	    <p>
