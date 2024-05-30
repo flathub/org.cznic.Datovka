@@ -21,8 +21,8 @@ modules:
         - --without-python
     sources:
         - type: archive
-          url: https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.6.tar.xz
-          sha256: 889c593a881a3db5fdd96cc9318c87df34eb648edfc458272ad46fd607353fbb
+          url: https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.7.tar.xz
+          sha256: 24ae78ff1363a973e6d8beba941a7945da2ac056e19b53956aeb6927fd6cfb56
 
   - name: libdatovka
     config-opts:
@@ -47,8 +47,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.23.7/datovka-4.23.7.tar.xz
-          sha256: 579c45a17eceaa0ae4d54177e8a815459d1013e0c3682bafb5007a83ed6ef3fc
+          url: https://secure.nic.cz/files/datove_schranky/4.23.8/datovka-4.23.8.tar.xz
+          sha256: 97ba1e4d5d267069d4d8ea7bf1b587938dbfd2bd8c0a6d89fc503357886ee1da
         - type: patch
           path: datovka.patch
         - type: patch
