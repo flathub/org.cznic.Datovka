@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2024-05-30 12:00:05.160066670 +0200
++++ datovka.metainfo.xml	2024-06-19 17:51:06.259799104 +0200
 @@ -31,23 +31,31 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -37,13 +37,46 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-@@ -63,4 +71,31 @@
+@@ -63,4 +71,77 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
-+	  <release version="4.23.8" date="2023-05-17">
++	  <release version="4.24.0" date="2024-06-18">
++	  <description>
++	    <p>New features:</p>
++	    <p xml:lang="cs">Nové vlastnosti:</p>
++	     <ul>
++         <li>Added new parameters to the "export-msg", "export-msgs", "import-msg" and "import-msgs" command line interfaces that allow reading/writing messages from/to databases</li>
++         <li>Large toolbar replaced by multiple customizable panels above each control in the main window. Panels can be optionally shown/hidden</li>
++         <li>The message list filter box in the main window is no longer part of the main toolbar. It is hidden by default and is displayed on demand below the list of messages in the main window</li>
++         <li xml:lang="cs">Přidány nové parametry do rozhraní příkazové řádky „export-msg“, „export-msgs“, „import-msg“ a „import-msgs“, které dovolují číst/zapisovat zprávy z/do databází</li>
++         <li xml:lang="cs">Veliký panel nástrojů nahrazen více nastavitelnými panely nad jednotlivými ovládacími prvky v hlavním okně. Panely lze volitelně zobrazit/skrýt</li>
++         <li xml:lang="cs">Pole pro filtrování seznamu zpráv v hlavním okně již není součástí hlavního panelu nástrojů. Ve výchozím nastavení je skryté a zobrazuje se na vyžádání pod seznam zpráv v hlavním okně</li>
++       </ul>
++       <p>Enhancements:</p>
++	    <p xml:lang="cs">Vylepšení:</p>
++     <ul>
++       <li>The new message creation dialog displays a warning that the source text of the attachment has been changed without the changed text being inserted as an attachment</li>
++       <li>The format of generated statements about the data message, envelope, data box, owner and user of the box has been unified with the mobile application</li>
++       <li>Default ISDS download timeout interval extended to 15 minutes</li>
++       <li xml:lang="cs">V dialogu pro vytvoření nové zprávy se zobrazuje upozornění, že došlo ke změně zdrojového textu přílohy, aniž by byl změněný text vložen jako příloha</li>
++       <li xml:lang="cs">Formát generovaných výpisů o datové zprávě, obálce, datové schránce, majiteli a uživateli schránky byl sjednocen s mobilní aplikací</li>
++       <li xml:lang="cs">Prodloužen výchozí interval pro vypršení délky stahování dat z ISDS na 15 minut</li>
++     </ul>
++	    <p>Bug fixes:</p>
++	    <p xml:lang="cs">Opravy chyb:</p>
++     <ul>
++       <li>Fixed sorting of messages by date in the list of searched messages</li>
++       <li>The VoDZ message flag is updated whenever the message list is downloaded</li>
++       <li xml:lang="cs">Opraveno řazení zpráv podle data v seznamu vyhledaných zpráv</li>
++       <li xml:lang="cs" >Příznak VoDZ zpráv se aktualizuje vždy, když se stahuje seznam zpráv</li>
++     </ul>  
++     </description>
++    </release>
++    
++	  <release version="4.23.8" date="2024-05-17">
 +	  <description>
 +	    <p>Bug fixes:</p>
 +	    <p xml:lang="cs">Opravy chyb:</p>
@@ -55,7 +88,7 @@
 +     </ul>  
 +     </description>
 +    </release>
-+	  <release version="4.23.7" date="2023-04-22">
++	  <release version="4.23.7" date="2024-04-22">
 +	  <description>
 +	    <p>Improvements:</p>
 +	    <p xml:lang="cs">Vylepšení:</p>
@@ -66,6 +99,19 @@
 +       <li xml:lang="cs">Drobné změny v některých dialozích.</li>
 +    </ul>
 +     </description>
-+     </release>		
++     </release>
++     
++     <release version="4.23.7" date="2024-04-22">
++	  <description>
++	    <p>Improvements:</p>
++	    <p xml:lang="cs">Vylepšení:</p>
++     <ul>
++       <li>A package with a 64-bit portable version is available for Windows.</li>
++       <li>Minor changes in some dialogs.</li>
++       <li xml:lang="cs">Pro Windows je k dispozici balík s 64bitovou přenosnou verzí.</li>
++       <li xml:lang="cs">Drobné změny v některých dialozích.</li>
++    </ul>
++     </description>
++     </release>
 +	</releases>
  </component>
