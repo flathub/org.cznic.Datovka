@@ -1,5 +1,16 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2024-06-19 17:51:06.259799104 +0200
++++ datovka.metainfo.xml	2024-06-20 10:07:09.924895205 +0200
+@@ -13,8 +13,8 @@
+ 	<name>Datovka</name>
+ 	<name xml:lang="cs">Datovka</name>
+ 
+-	<summary>A free graphical user interface for data boxes</summary>
+-	<summary xml:lang="cs">Svobodné uživatelské rozhraní pro datové schránky</summary>
++	<summary>Access your data boxes</summary>
++	<summary xml:lang="cs">Přistupujte k datovým schránkám</summary>
+ 
+ 	<description>
+ 		<p>
 @@ -31,23 +31,31 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
@@ -37,10 +48,7 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-
 @@ -63,4 +71,77 @@
-
-
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
