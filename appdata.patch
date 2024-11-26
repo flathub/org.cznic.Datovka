@@ -48,7 +48,7 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-@@ -63,4 +71,90 @@
+@@ -63,4 +71,77 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
