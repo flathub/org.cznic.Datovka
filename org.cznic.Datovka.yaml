@@ -21,8 +21,8 @@ modules:
         - --without-python
     sources:
         - type: archive
-          url: https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.7.tar.xz
-          sha256: 24ae78ff1363a973e6d8beba941a7945da2ac056e19b53956aeb6927fd6cfb56
+          url: https://download.gnome.org/sources/libxml2/2.13/libxml2-2.13.5.tar.xz
+          sha256: 74fc163217a3964257d3be39af943e08861263c4231f9ef5b496b6f6d4c7b2b6
 
   - name: libdatovka
     config-opts:
@@ -30,8 +30,8 @@ modules:
         - --disable-static
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.6.2.tar.xz
-          sha256: bbf0b0f3b95b8dc7f2fdb99a1f4a1dcf6ea2180e1300449acb67beb9e7700f8c
+          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.7.0.tar.xz
+          sha256: 5286c8787eb5eff270371a37cc6cedbda0b6978931671c2bc28026dde5b6950b
 
   - name: quazip
     buildsystem: cmake-ninja
@@ -47,8 +47,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.24.0/datovka-4.24.0.tar.xz
-          sha256: cab80427e80daa4b26c4cf05028bcc2d19cb6f0cc73ddc33e402dba6fc4256ce
+          url: https://secure.nic.cz/files/datove_schranky/4.24.2/datovka-4.24.2.tar.xz
+          sha256: 3556853c5703d6eff2784649d453d5b546b52918bd66157c79082b98df027d38
         - type: patch
           path: datovka.patch
         - type: patch
