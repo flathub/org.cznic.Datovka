@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2024-06-20 10:07:09.924895205 +0200
++++ datovka.metainfo.xml	2024-11-26 13:03:06.710691112 +0100
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -48,12 +48,25 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-@@ -63,4 +71,77 @@
+@@ -63,4 +71,90 @@
  
  	<update_contact>datove-schranky@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++	  <release version="4.24.2" date="2024-09-02">
++	  <description>
++	  <p>Enhancements:</p>
++	    <p xml:lang="cs">Vylepšení:</p>
++	     <ul>
++	       <li>Added new credit event processing - restore messages from the vault basket</li>
++         <li>Updated help URLs and web archive locations for installation packages</li>
++	       <li xml:lang="cs">Přidáno zpracování nové kreditní události - obnovení zpráv z trezorového koše</li>
++         <li xml:lang="cs">Aktualizovány URL nápovědy a umístění webového archivu instalačních balíků</li>
++       </ul>
++    </description>
++    </release>
++    
 +	  <release version="4.24.0" date="2024-06-18">
 +	  <description>
 +	    <p>New features:</p>
