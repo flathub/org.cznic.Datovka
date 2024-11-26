@@ -1,5 +1,12 @@
---- /deployment/datovka.metainfo.xml	2020-06-11 12:06:26.783003000 +0200
-+++ datovka.metainfo.xml	2024-11-26 13:03:06.710691112 +0100
+--- /deployment/datovka.metainfo.xml	2024-11-26 14:15:41.359741367 +0100
++++ datovka.metainfo.xml	2024-11-26 14:15:28.920811531 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<!-- Copyright 2014-2024 CZ.NIC Labs -->
++<!-- Copyright 2014-2020 CZ.NIC Labs -->
+ <component type="desktop-application">
+ 	<id>datovka.desktop</id>
+ 	<metadata_license>CC0-1.0</metadata_license>
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -48,9 +55,9 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-@@ -63,4 +71,77 @@
+@@ -63,4 +71,90 @@
  
- 	<update_contact>datove-schranky@labs.nic.cz</update_contact>
+ 	<update_contact>datovka@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
