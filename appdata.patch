@@ -1,5 +1,5 @@
 --- /deployment/datovka.metainfo.xml	2025-04-03 15:12:31.690480884 +0200
-+++ datovka.metainfo.xml	2025-04-03 15:25:08.508497666 +0200
++++ datovka.metainfo.xml	2025-04-03 16:22:41.555969061 +0200
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -46,6 +46,15 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
+@@ -55,7 +61,7 @@
+ 
+ 	<screenshots>
+ 		<screenshot type="default">
+-			<image>https://www.datovka.cz/images/desktop-main.png</image>
++			<image>https://eischmann.cz/desktop-main.png</image>
+ 			<caption>Main window of the application</caption>
+ 			<caption xml:lang="cs">Hlavní okno aplikace</caption>
+ 		</screenshot>
 @@ -63,4 +69,101 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
