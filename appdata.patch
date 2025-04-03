@@ -1,63 +1,9 @@
---- /deployment/datovka.metainfo.xml	2024-11-26 14:15:41.359741367 +0100
-+++ datovka.metainfo.xml	2025-04-02 15:37:34.076400958 +0200
-@@ -1,5 +1,5 @@
- <?xml version="1.0" encoding="utf-8"?>
--<!-- Copyright 2014-2024 CZ.NIC Labs -->
-+<!-- Copyright 2014-2025 CZ.NIC Labs -->
- <component type="desktop-application">
- 	<id>datovka.desktop</id>
- 	<metadata_license>CC0-1.0</metadata_license>
-@@ -13,7 +13,7 @@
- 	<name>Datovka</name>
- 	<name xml:lang="cs">Datovka</name>
- 
--	<summary>A free graphical user interface for data boxes</summary>
-+  <summary>A free graphical user interface for data boxes</summary>
- 	<summary xml:lang="cs">Svobodné uživatelské rozhraní pro datové schránky</summary>
- 
- 	<description>
-@@ -31,23 +31,31 @@
- 		<p>
- 			The user interface resembles the interface of common e-mail clients.
- 		</p>
--	</description>
--	<description xml:lang="cs">
- 		<p>
-+			This flatpak is not maintained by CZ.NIC, z.s.p.o.
-+		</p>
-+		<p  xml:lang="cs">
- 			Datovka je multiplatformní desktopová aplikace pro přístup k datovým schránkám.
- 			Datová schránka v České republice je elektronické úložiště, které je určeno
- 			k doručování dokumentů a pro komunikaci s orgány veřejné moci.
- 		</p>
--		<p>
-+		<p  xml:lang="cs">
- 			Z Datovky je možné číst zprávy, odesílat zprávy, kontrolovat integritu datových zpráv,
- 			exportovat doručenky i celé zprávy, exportovat přehled korespondence za určité
- 			časové období, apod.
- 		</p>
--		<p>
-+		<p  xml:lang="cs">
- 			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
- 		</p>
-+		<p  xml:lang="cs">
-+			Tento flatpak není spravovaný CZ.NIC, z.s.p.o.
-+		</p>
- 	</description>
--
-+	
-+  <developer id="nic.cz">
-+     <name>CZ.NIC</name>
-+  </developer>
-+  
- 	<kudos>
- 		<kudo>HiDpiIcon</kudo>
- 		<kudo>ModernToolkit</kudo>
-@@ -63,4 +71,102 @@
+--- /deployment/datovka.metainfo.xml	2025-04-03 15:12:31.690480884 +0200
++++ datovka.metainfo.xml	2025-04-03 15:15:23.121926492 +0200
+@@ -63,4 +63,101 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
-+	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
 +	  <release version="4.26.0" date="2024-04-01">
 +	    <description>
