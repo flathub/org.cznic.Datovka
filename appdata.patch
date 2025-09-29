@@ -1,5 +1,5 @@
---- /deployment/datovka.metainfo.xml	2025-04-03 15:12:31.690480884 +0200
-+++ datovka.metainfo.xml	2025-04-03 16:22:41.555969061 +0200
+--- /deployment/datovka.metainfo.xml	2025-09-29 14:43:02.617388353 +0200
++++ datovka.metainfo.xml	2025-09-29 14:44:06.252174703 +0200
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -55,11 +55,41 @@
  			<caption>Main window of the application</caption>
  			<caption xml:lang="cs">Hlavní okno aplikace</caption>
  		</screenshot>
-@@ -63,4 +69,101 @@
+@@ -63,4 +69,118 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++	  <release version="4.27.0" date="2025-09-24">
++	    <description>
++	      <p>New features:</p>
++	      <p xml:lang="cs">Nové vlastnosti:</p>
++	      <ul>
++	        <li>Added functions for re-timestamping of data messages by the ISDS system. User can select messages whose timestamps the application should track. Application will alert user about timestamps that can be re-timestamped. User can then perform re-timestamping.</li>
++	        <li>Added command line parameters `--conf-basedir` and `--conf-dir` that can be used to change the default location of application configuration directory.</li>
++	        <li>Data box data in the application can be exported to an archive that can then be loaded in the mobile application.</li>
++	        <li xml:lang="cs">Přidány funkce pro přerazítkování datových zpráv systémem ISDS. Uživatel muže zvolit zprávy, jejichž časová razítka má aplikace sledovat. Aplikace jej upozorní na časová razítka, která lze přerazítkovat. Uživatel pak může provést přerazítkování.</li>
++	        <li xml:lang="cs">Přidány parametry příkazové řádky `--conf-basedir` a `--conf-dir`, které lze použít pro změnu nastavení výchozího umístění adresáře s konfigurací aplikace.</li>
++	        <li xml:lang="cs">Data datových schránek v aplikaci lze vyexportovat do archivu, který pak lze načíst v mobilní aplikaci.</li>
++	      </ul>
++	      <p>Enhancements:</p>
++	      <p xml:lang="cs">Vylepšení:</p>
++	      <ul>
++	        <li>In the digital signature detail dialog of messages, all found timestamps are displayed.</li>
++	        <li>On Linux, `xdg-email` program is used as the default method for composing emails, if installed.</li>
++	        <li>Added more options to the data storage directory change dialog.</li>
++	        <li xml:lang="cs">V dialogu detailu digitálního podpisu zprávy se zobrazují všechna nalezená časová razítka.</li>
++	        <li xml:lang="cs">Na Linuxu se jako výchozí způsob pro sestavení e-mailů použije program `xdg-email`, pokud je nainstalovaný.</li>
++	        <li xml:lang="cs">Přidány další volby do dialogového okna změny adresáře pro ukládání dat.</li>
++	      </ul>
++	      <p>Bug fixes:</p>
++	      <p xml:lang="cs">Opravy chyb:</p>
++	      <ul>
++	        <li>Fixed progress indicator display error in tables.</li>
++	        <li xml:lang="cs">Opravena chyba zobrazování indikátoru průběhu v tabulkách.</li>
++	      </ul>
++	    </description>
++	  </release>
 +	  <release version="4.26.0" date="2024-04-01">
 +	    <description>
 +	    <p>You can find information about changes in the release notes: https://www.datovka.cz/cs/2025-04-01-datovka-4.26.0.html</p>
@@ -131,19 +161,6 @@
 +     </description>
 +    </release>
 +	  <release version="4.23.7" date="2024-04-22">
-+	  <description>
-+	    <p>Improvements:</p>
-+	    <p xml:lang="cs">Vylepšení:</p>
-+     <ul>
-+       <li>A package with a 64-bit portable version is available for Windows.</li>
-+       <li>Minor changes in some dialogs.</li>
-+       <li xml:lang="cs">Pro Windows je k dispozici balík s 64bitovou přenosnou verzí.</li>
-+       <li xml:lang="cs">Drobné změny v některých dialozích.</li>
-+    </ul>
-+     </description>
-+     </release>
-+     
-+     <release version="4.23.7" date="2024-04-22">
 +	  <description>
 +	    <p>Improvements:</p>
 +	    <p xml:lang="cs">Vylepšení:</p>

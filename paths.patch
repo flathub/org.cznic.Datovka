@@ -14,21 +14,21 @@ index c45342d0..d031b9e8 100644
  #undef ILL_FNAME_CH_NO_SEP
  #undef ILL_FNAME_CH
  #undef ILL_FNAME_REP
-@@ -385,7 +390,7 @@ QString confDirPath(const QString &confSubdir)
+@@ -475,7 +480,7 @@ QString confDfltBaseDirPath(const QString &confSubdir)
  			    dir.toUtf8().constData());
  		}
- 		return dir;
+ 		return homeDir.path();
 -	} else if (homeDir.exists() && QFileInfo(homeDir.path()).isWritable()) {
 +	} else if (homeDir.exists() && QFileInfo(homeDir.path()).isWritable() && !checkFlatpakInstance()) {
  		/*
  		 * Default configuration subdirectory in home directory is not
  		 * present but home is writeable.
-@@ -410,7 +415,7 @@ QString confDirPath(const QString &confSubdir)
+@@ -501,7 +506,7 @@ QString confDfltBaseDirPath(const QString &confSubdir)
  		 * Still using confSubdir in order to let the user change
  		 * the configuration via command line.
  		 */
--		return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
-+		return QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) +
- 		    QDir::separator() + confSubdir;
+-		return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
++		return QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
  #  else /* < Qt-5.4 */
  #    warning "Compiling against version < Qt-5.4 which does not provide QStandardPaths::AppDataLocation."
+ 		/*
