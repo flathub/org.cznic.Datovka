@@ -1,7 +1,7 @@
 app-id: org.cznic.Datovka
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: '6.7'
+runtime-version: '6.9'
 command: datovka
 rename-desktop-file: datovka.desktop
 rename-appdata-file: datovka.metainfo.xml
@@ -21,8 +21,16 @@ modules:
         - --without-python
     sources:
         - type: archive
-          url: https://download.gnome.org/sources/libxml2/2.14/libxml2-2.14.0.tar.xz
-          sha256: 3e2ed89d81d210322d70b35460166d4ea285e5bb017576972a1d76a09631985c
+          url: https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.0.tar.xz
+          sha256: 5abc766497c5b1d6d99231f662e30c99402a90d03b06c67b62d6c1179dedd561
+
+  - name: libgcrypt-config
+    buildsystem: simple
+    build-commands:
+        - install -m755 libgcrypt-config /app/bin/libgcrypt-config
+    sources:
+        - type: file
+          path: libgcrypt-config
 
   - name: libdatovka
     config-opts:
@@ -30,8 +38,8 @@ modules:
         - --disable-static
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.7.1.tar.xz
-          sha256: c8d5cbc1009a6d98c507a6537664b7d62f31f372cd1635185d285b79e92ebcff
+          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.7.2.tar.xz
+          sha256: efbcaa658066e60bb7dde6c3ebe0b7147aeb466130461cb4784085d103490706
 
   - name: quazip
     buildsystem: cmake-ninja
@@ -47,8 +55,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.26.0/datovka-4.26.0.tar.xz
-          sha256: fa11e553d9432b7886324d8171147972ca853e6f8f871253a12ff1fec0ab3076
+          url: https://secure.nic.cz/files/datove_schranky/4.27.0/datovka-4.27.0.tar.xz
+          sha256: 9e353316cd266fba50de1c7cd6c43b9f7b65667160d3e6e4f8a661389de08bf3
         - type: patch
           path: datovka.patch
         - type: patch
