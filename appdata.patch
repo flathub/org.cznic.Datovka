@@ -177,18 +177,5 @@
 +    </ul>
 +     </description>
 +     </release>
-+     
-+     <release version="4.23.7" date="2024-04-22">
-+	  <description>
-+	    <p>Improvements:</p>
-+	    <p xml:lang="cs">Vylepšení:</p>
-+     <ul>
-+       <li>A package with a 64-bit portable version is available for Windows.</li>
-+       <li>Minor changes in some dialogs.</li>
-+       <li xml:lang="cs">Pro Windows je k dispozici balík s 64bitovou přenosnou verzí.</li>
-+       <li xml:lang="cs">Drobné změny v některých dialozích.</li>
-+    </ul>
-+     </description>
-+     </release>
 +	</releases>
  </component>
