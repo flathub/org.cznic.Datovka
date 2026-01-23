@@ -1,5 +1,5 @@
---- /deployment/datovka.metainfo.xml	2026-01-23 18:22:50.258740211 +0100
-+++ datovka.metainfo.xml	2026-01-23 18:15:57.845174430 +0100
+--- /deployment/datovka.metainfo.xml	2026-01-22 18:22:50.258740211 +0100
++++ datovka.metainfo.xml	2026-01-23 17:05:55.289496127 +0100
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -48,6 +48,15 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
+@@ -55,7 +63,7 @@
+ 
+ 	<screenshots>
+ 		<screenshot type="default">
+-			<image>https://www.datovka.cz/images/desktop-main.png</image>
++			<image>https://github.com/flathub/org.cznic.Datovka/raw/refs/heads/candidate/datovka-screenshot.png</image>
+ 			<caption>Main window of the application</caption>
+ 			<caption xml:lang="cs">Hlavní okno aplikace</caption>
+ 		</screenshot>
 @@ -63,4 +71,143 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
