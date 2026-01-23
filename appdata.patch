@@ -1,5 +1,5 @@
---- /deployment/datovka.metainfo.xml	2026-01-22 18:22:50.258740211 +0100
-+++ datovka.metainfo.xml	2026-01-22 18:15:57.845174430 +0100
+--- /deployment/datovka.metainfo.xml	2026-01-23 18:22:50.258740211 +0100
++++ datovka.metainfo.xml	2026-01-23 18:15:57.845174430 +0100
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -166,6 +166,19 @@
 +     </description>
 +    </release>
 +	  <release version="4.23.7" date="2024-04-22">
++	  <description>
++	    <p>Improvements:</p>
++	    <p xml:lang="cs">Vylepšení:</p>
++     <ul>
++       <li>A package with a 64-bit portable version is available for Windows.</li>
++       <li>Minor changes in some dialogs.</li>
++       <li xml:lang="cs">Pro Windows je k dispozici balík s 64bitovou přenosnou verzí.</li>
++       <li xml:lang="cs">Drobné změny v některých dialozích.</li>
++    </ul>
++     </description>
++     </release>
++     
++     <release version="4.23.7" date="2024-04-22">
 +	  <description>
 +	    <p>Improvements:</p>
 +	    <p xml:lang="cs">Vylepšení:</p>
