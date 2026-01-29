@@ -1,5 +1,5 @@
---- /deployment/datovka.metainfo.xml	2025-09-29 14:43:02.617388353 +0200
-+++ datovka.metainfo.xml	2025-09-29 14:44:06.252174703 +0200
+--- /deployment/datovka.metainfo.xml	2026-01-22 18:22:50.258740211 +0100
++++ datovka.metainfo.xml	2026-01-29 16:25:29.312393004 +0100
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -11,7 +11,7 @@
  
  	<description>
  		<p>
-@@ -31,23 +31,29 @@
+@@ -31,23 +31,31 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
  		</p>
@@ -20,19 +20,19 @@
  		<p>
 +			This flatpak is not maintained by CZ.NIC, z.s.p.o.
 +		</p>
-+		<p xml:lang="cs">
++		<p  xml:lang="cs">
  			Datovka je multiplatformní desktopová aplikace pro přístup k datovým schránkám.
  			Datová schránka v České republice je elektronické úložiště, které je určeno
  			k doručování dokumentů a pro komunikaci s orgány veřejné moci.
  		</p>
 -		<p>
-+		<p xml:lang="cs">
++		<p  xml:lang="cs">
  			Z Datovky je možné číst zprávy, odesílat zprávy, kontrolovat integritu datových zpráv,
  			exportovat doručenky i celé zprávy, exportovat přehled korespondence za určité
  			časové období, apod.
  		</p>
 -		<p>
-+		<p xml:lang="cs">
++		<p  xml:lang="cs">
  			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
  		</p>
 +		<p  xml:lang="cs">
@@ -40,68 +40,82 @@
 +		</p>
  	</description>
 -
++	
 +  <developer id="nic.cz">
 +     <name>CZ.NIC</name>
 +  </developer>
++  
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-@@ -55,7 +61,7 @@
+@@ -55,7 +63,7 @@
  
  	<screenshots>
  		<screenshot type="default">
 -			<image>https://www.datovka.cz/images/desktop-main.png</image>
-+			<image>https://eischmann.cz/desktop-main.png</image>
++			<image>https://eischmann.cz/desktop-screenshot.png</image>
  			<caption>Main window of the application</caption>
  			<caption xml:lang="cs">Hlavní okno aplikace</caption>
  		</screenshot>
-@@ -63,4 +69,118 @@
+@@ -63,4 +71,143 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
++	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
-+	  <release version="4.27.0" date="2025-09-24">
-+	    <description>
-+	      <p>New features:</p>
-+	      <p xml:lang="cs">Nové vlastnosti:</p>
-+	      <ul>
-+	        <li>Added functions for re-timestamping of data messages by the ISDS system. User can select messages whose timestamps the application should track. Application will alert user about timestamps that can be re-timestamped. User can then perform re-timestamping.</li>
-+	        <li>Added command line parameters `--conf-basedir` and `--conf-dir` that can be used to change the default location of application configuration directory.</li>
-+	        <li>Data box data in the application can be exported to an archive that can then be loaded in the mobile application.</li>
-+	        <li xml:lang="cs">Přidány funkce pro přerazítkování datových zpráv systémem ISDS. Uživatel muže zvolit zprávy, jejichž časová razítka má aplikace sledovat. Aplikace jej upozorní na časová razítka, která lze přerazítkovat. Uživatel pak může provést přerazítkování.</li>
-+	        <li xml:lang="cs">Přidány parametry příkazové řádky `--conf-basedir` a `--conf-dir`, které lze použít pro změnu nastavení výchozího umístění adresáře s konfigurací aplikace.</li>
-+	        <li xml:lang="cs">Data datových schránek v aplikaci lze vyexportovat do archivu, který pak lze načíst v mobilní aplikaci.</li>
-+	      </ul>
-+	      <p>Enhancements:</p>
-+	      <p xml:lang="cs">Vylepšení:</p>
-+	      <ul>
-+	        <li>In the digital signature detail dialog of messages, all found timestamps are displayed.</li>
-+	        <li>On Linux, `xdg-email` program is used as the default method for composing emails, if installed.</li>
-+	        <li>Added more options to the data storage directory change dialog.</li>
-+	        <li xml:lang="cs">V dialogu detailu digitálního podpisu zprávy se zobrazují všechna nalezená časová razítka.</li>
-+	        <li xml:lang="cs">Na Linuxu se jako výchozí způsob pro sestavení e-mailů použije program `xdg-email`, pokud je nainstalovaný.</li>
-+	        <li xml:lang="cs">Přidány další volby do dialogového okna změny adresáře pro ukládání dat.</li>
-+	      </ul>
-+	      <p>Bug fixes:</p>
-+	      <p xml:lang="cs">Opravy chyb:</p>
-+	      <ul>
-+	        <li>Fixed progress indicator display error in tables.</li>
-+	        <li xml:lang="cs">Opravena chyba zobrazování indikátoru průběhu v tabulkách.</li>
-+	      </ul>
-+	    </description>
-+	  </release>
-+	  <release version="4.26.0" date="2024-04-01">
-+	    <description>
-+	    <p>You can find information about changes in the release notes: https://www.datovka.cz/cs/2025-04-01-datovka-4.26.0.html</p>
-+	    <p xml:lang="cs">Více informací o změnách v tomto vydání naleznete v poznámkách k vydání: https://www.datovka.cz/cs/2025-04-01-datovka-4.26.0.html</p>	    
-+	    </description>
-+	  </release>	
++	<release version="4.28.0" date="2026-01-20">
++      <description>
++        <p>New features:</p>
++        <p xml:lang="cs">Nové vlastnosti:</p>
++        <ul>
++          <li>Saving of data message drafts</li>
++          <li>The user can be periodically notified to perform a backup to a specified location</li>
++          <li xml:lang="cs">Ukládání rozpracovaných datových zpráv do konceptů</li>
++          <li xml:lang="cs">Uživatel může být periodicky upozorňován na provedení zálohy do určeného umístění</li>
++        </ul>
++        <p>Enhancements:</p>
++        <p xml:lang="cs">Vylepšení:</p>
++        <ul>
++          <li>The re-stamping status is displayed as plain text, not as an error</li>
++          <li>Extended data message database table definitions with items used in the mobile application</li>
++          <li>The AuthenticateMessage operation is preferentially used to verify the authenticity of a data message</li>
++          <li>Time data is saved to databases with the time zone</li>
++          <li xml:lang="cs">Stav přerazítkování je zobrazován jako obyčejný text, ne jako chyba</li>
++          <li xml:lang="cs">Rozšířeny definice tabulek v databázi datových zpráv o položky používané v mobilní aplikaci</li>
++          <li xml:lang="cs">Pro ověření pravosti datové zprávy se přednostně používá operace AuthenticateMessage</li>
++          <li xml:lang="cs">Časové údaje se do databází ukládají s časovou zónou</li>
++        </ul>
++        <p>Bug fixes:</p>
++        <p xml:lang="cs">Opravy chyb:</p>
++        <ul>
++          <li>Fixed operation for verifying external ZFO files in the ISDS system</li>
++          <li>Fixed counter of messages recommended for re-stamping</li>
++          <li>Fixed an error in listing delivery info from an external file</li>
++          <li>Fixed an error in processing invalid characters in the transfer archive</li>
++          <li>Fixed an error in the entered PIN verification function</li>
++          <li>Fixed an error when splitting a monolithic message database into multiple files</li>
++          <li xml:lang="cs">Opravena operace pro ověřování externích ZFO souborů v systému ISDS</li>
++          <li xml:lang="cs">Opraven čítač zpráv doporučených k přerazítkování</li>
++          <li xml:lang="cs">Opravena chyba ve výpisu informací z doručenky z externího souboru</li>
++          <li xml:lang="cs">Opravena chyba ve zpracování nepovolených znaků transferového archivu</li>
++          <li xml:lang="cs">Opravena chyba ve funkci pro ověření zadaného PINu</li>
++          <li xml:lang="cs">Opravena chyba při rozdělovaná monolitické databáze zpráv do více souborů</li>
++        </ul>
++      </description>
++    </release>
++	   <release version="4.27.0" date="2025-09-24">
++       <description>
++         <p xml:lang="en">You can find changelog at https://www.datovka.cz/cs/2025-09-24-datovka-4.27.0.html</p>
++         <p xml:lang="cs">Více informací o změnách v tomto vydání naleznete v poznámkách k vydání: https://www.datovka.cz/cs/2025-09-24-datovka-4.27.0.html</p>
++       </description>
++    </release>
 +	  <release version="4.25.0" date="2024-12-17">
-+	    <description>
-+	    <p>You can find information about changes in the release notes: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>
-+	    <p xml:lang="cs">Více informací o změnách v tomto vydání naleznete v poznámkách k vydání: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>	    
-+	    </description>
++	  <description>
++	  <p>You can find information about changes in the release notes: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>
++	  <p xml:lang="cs">Více informací o změnách v tomto vydání naleznete v poznámkách k vydání: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>
++	  </description>
 +	  </release>
++	  
 +	  <release version="4.24.2" date="2024-09-02">
 +	  <description>
 +	  <p>Enhancements:</p>
@@ -161,6 +175,19 @@
 +     </description>
 +    </release>
 +	  <release version="4.23.7" date="2024-04-22">
++	  <description>
++	    <p>Improvements:</p>
++	    <p xml:lang="cs">Vylepšení:</p>
++     <ul>
++       <li>A package with a 64-bit portable version is available for Windows.</li>
++       <li>Minor changes in some dialogs.</li>
++       <li xml:lang="cs">Pro Windows je k dispozici balík s 64bitovou přenosnou verzí.</li>
++       <li xml:lang="cs">Drobné změny v některých dialozích.</li>
++    </ul>
++     </description>
++     </release>
++     
++     <release version="4.23.7" date="2024-04-22">
 +	  <description>
 +	    <p>Improvements:</p>
 +	    <p xml:lang="cs">Vylepšení:</p>
