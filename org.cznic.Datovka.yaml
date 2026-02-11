@@ -22,6 +22,10 @@ cleanup:
   - "*.pc"
   - "/bin/xml*"
   - /include
+  - /share/aclocal
+  - "/share/doc/libxml*"
+  - /share/gtk-doc
+  - /share/man
 
 modules:
 
@@ -68,8 +72,3 @@ modules:
           dest-filename: datovka-script
           commands: 
             - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka-run "$@"  
-
-  - /share/aclocal
-  - "/share/doc/libxml*"
-  - /share/gtk-doc
-  - /share/man
