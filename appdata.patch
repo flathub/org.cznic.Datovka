@@ -47,7 +47,6 @@
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
-
 @@ -55,7 +63,7 @@
  
  	<screenshots>
@@ -57,7 +56,7 @@
  			<caption>Main window of the application</caption>
  			<caption xml:lang="cs">Hlavní okno aplikace</caption>
  		</screenshot>
-@@ -63,4 +71,177 @@
+@@ -63,4 +71,162 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
