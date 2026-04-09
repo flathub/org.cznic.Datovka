@@ -1,5 +1,6 @@
---- /deployment/datovka.metainfo.xml	2026-01-22 18:22:50.258740211 +0100
-+++ datovka.metainfo.xml	2026-01-29 16:25:29.312393004 +0100
+
+--- /deployment/datovka.metainfo.xml	2026-04-07 12:00:00.000000000 +0200
++++ datovka.metainfo.xml	2026-04-09 12:00:00.000000000 +0200
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -11,7 +12,7 @@
  
  	<description>
  		<p>
-@@ -31,23 +31,31 @@
+@@ -31,23 +31,29 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
  		</p>
@@ -20,19 +21,19 @@
  		<p>
 +			This flatpak is not maintained by CZ.NIC, z.s.p.o.
 +		</p>
-+		<p  xml:lang="cs">
++		<p xml:lang="cs">
  			Datovka je multiplatformní desktopová aplikace pro přístup k datovým schránkám.
  			Datová schránka v České republice je elektronické úložiště, které je určeno
  			k doručování dokumentů a pro komunikaci s orgány veřejné moci.
  		</p>
 -		<p>
-+		<p  xml:lang="cs">
++		<p xml:lang="cs">
  			Z Datovky je možné číst zprávy, odesílat zprávy, kontrolovat integritu datových zpráv,
  			exportovat doručenky i celé zprávy, exportovat přehled korespondence za určité
  			časové období, apod.
  		</p>
 -		<p>
-+		<p  xml:lang="cs">
++		<p xml:lang="cs">
  			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
  		</p>
 +		<p  xml:lang="cs">
@@ -40,11 +41,9 @@
 +		</p>
  	</description>
 -
-+	
 +  <developer id="nic.cz">
 +     <name>CZ.NIC</name>
 +  </developer>
-+  
  	<kudos>
  		<kudo>HiDpiIcon</kudo>
  		<kudo>ModernToolkit</kudo>
@@ -57,12 +56,45 @@
  			<caption>Main window of the application</caption>
  			<caption xml:lang="cs">Hlavní okno aplikace</caption>
  		</screenshot>
-@@ -63,4 +71,143 @@
+@@ -63,4 +71,162 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
-+	<url type="donation">https://donations.nic.cz/cs/donate/?project=datovka</url>
 +	<releases>
++	<release version="4.29.0" date="2026-04-07">
++      <description>
++        <p>New features:</p>
++        <p xml:lang="cs">Nové vlastnosti:</p>
++        <ul>
++          <li>Messages can be dragged from the message list in the main window and search window as ZFO files using the mouse</li>
++          <li>Content in editable lists (recipients, attachments, ...) can be deleted by pressing the Delete key (or Command+Backspace on macOS)</li>
++          <li>Data message files from the message list in the main window and search window can be copied as ZFO files by pressing Ctrl+C. Attachments can be copied similarly</li>
++          <li>In the data message sending dialog, attachment files can be inserted using Ctrl+V</li>
++          <li>All saved data messages can be searched for timestamp expiration. All suitable messages can be sent for re-stamping</li>
++          <li xml:lang="cs">Myší lze vytahovat zprávy ze seznamu zpráv v hlavním okně i okně vyhledávání jako ZFO soubory</li>
++          <li xml:lang="cs">Obsah v editovatelných seznamech (příjemců, příloh, ...) lze odstraňovat stisknutím klávesy Delete (nebo Command+Backspace na macOS)</li>
++          <li xml:lang="cs">Soubory datových zpráv ze seznamu zpráv v hlavním okně a okně vyhledávání lze vykopírovat jako ZFO soubory stisknutím Ctrl+C. Podobně lze kopírovat i přílohy</li>
++          <li xml:lang="cs">V dialogu pro odeslání datových zpráv lze soubory příloh vkládat pomocí Ctrl+V</li>
++          <li xml:lang="cs">Všechny uložené datové zprávy lze prohledat na expiraci časového razítka. Všechny zprávy, které jsou k tomu vhodné, lze odeslat k přerazítkování</li>
++        </ul>
++        <p>Enhancements:</p>
++        <p xml:lang="cs">Vylepšení:</p>
++        <ul>
++          <li>Data from Mobile Datovka (version 2.6.0 and higher) can be loaded in the desktop application without conversion</li>
++          <li>During Mobile Key login, more detailed information about the Mobile Key verification status is displayed while waiting for confirmation</li>
++          <li>Transition to QuaZIP-1.5</li>
++          <li xml:lang="cs">Data z mobilní Datovky (verze 2.6.0 a vyšší) je možné v desktopové aplikaci načítat bez konverze</li>
++          <li xml:lang="cs">V průběhu přihlašování Mobilním klíčem se během čekání na potvrzení zobrazují detailnější informace o stavu ověření Mobilním klíčem</li>
++          <li xml:lang="cs">Přechod na QuaZIP-1.5</li>
++        </ul>
++        <p>Bug fixes:</p>
++        <p xml:lang="cs">Opravy chyb:</p>
++        <ul>
++          <li>Fixed an error in importing data from the mobile application</li>
++          <li xml:lang="cs">Opravena chyba v importu dat z mobilní aplikace</li>
++        </ul>
++      </description>
++    </release>
 +	<release version="4.28.0" date="2026-01-20">
 +      <description>
 +        <p>New features:</p>
@@ -110,12 +142,11 @@
 +       </description>
 +    </release>
 +	  <release version="4.25.0" date="2024-12-17">
-+	  <description>
-+	  <p>You can find information about changes in the release notes: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>
-+	  <p xml:lang="cs">Více informací o změnách v tomto vydání naleznete v poznámkách k vydání: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>
-+	  </description>
++	    <description>
++	    <p>You can find information about changes in the release notes: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>
++	    <p xml:lang="cs">Více informací o změnách v tomto vydání naleznete v poznámkách k vydání: https://www.datovka.cz/cs/2024-12-17-datovka-4.25.0.html</p>	    
++	    </description>
 +	  </release>
-+	  
 +	  <release version="4.24.2" date="2024-09-02">
 +	  <description>
 +	  <p>Enhancements:</p>
@@ -175,19 +206,6 @@
 +     </description>
 +    </release>
 +	  <release version="4.23.7" date="2024-04-22">
-+	  <description>
-+	    <p>Improvements:</p>
-+	    <p xml:lang="cs">Vylepšení:</p>
-+     <ul>
-+       <li>A package with a 64-bit portable version is available for Windows.</li>
-+       <li>Minor changes in some dialogs.</li>
-+       <li xml:lang="cs">Pro Windows je k dispozici balík s 64bitovou přenosnou verzí.</li>
-+       <li xml:lang="cs">Drobné změny v některých dialozích.</li>
-+    </ul>
-+     </description>
-+     </release>
-+     
-+     <release version="4.23.7" date="2024-04-22">
 +	  <description>
 +	    <p>Improvements:</p>
 +	    <p xml:lang="cs">Vylepšení:</p>

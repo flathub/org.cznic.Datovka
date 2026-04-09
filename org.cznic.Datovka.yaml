@@ -15,22 +15,35 @@ finish-args:
   - --device=dri
   - --talk-name=org.freedesktop.Notifications
 
-modules:
-  - name: libxml2
-    config-opts:
-        - --without-python
-    sources:
-        - type: archive
-          url: https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.1.tar.xz
-          sha256: c008bac08fd5c7b4a87f7b8a71f283fa581d80d80ff8d2efd3b26224c39bc54c
+cleanup:
+  - "*.a"
+  - "*.la"
+  - "*.cmake"
+  - "*.pc"
+  - "/bin/xml*"
+  - /include
+  - /share/aclocal
+  - "/share/doc/libxml*"
+  - /share/gtk-doc
+  - /share/man
 
+modules:
   - name: libgcrypt-config
     buildsystem: simple
     build-commands:
-        - install -m755 libgcrypt-config /app/bin/libgcrypt-config
+        - install -Dm755 libgcrypt-config /app/bin/libgcrypt-config
     sources:
         - type: file
           path: libgcrypt-config
+
+  - name: json-c
+    buildsystem: cmake-ninja
+    config-opts:
+        - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+    sources:
+        - type: archive
+          url: https://github.com/json-c/json-c/archive/refs/tags/json-c-0.18-20240915.tar.gz
+          sha256: 3112c1f25d39eca661fe3fc663431e130cc6e2f900c081738317fba49d29e298
 
   - name: libdatovka
     config-opts:
@@ -38,8 +51,8 @@ modules:
         - --disable-static
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.7.2.tar.xz
-          sha256: efbcaa658066e60bb7dde6c3ebe0b7147aeb466130461cb4784085d103490706
+          url: https://secure.nic.cz/files/datove_schranky/libdatovka/libdatovka-0.7.3.tar.xz
+          sha256: a6924d4cea81a87d6201036cafebe1283a8d372193a99e731970abf21e1434c1
 
   - name: quazip
     buildsystem: cmake-ninja
@@ -55,8 +68,8 @@ modules:
         - install -m755 datovka-script /app/bin/datovka
     sources:
         - type: archive
-          url: https://secure.nic.cz/files/datove_schranky/4.28.0/datovka-4.28.0.tar.xz
-          sha256: 05dc0c541fc4d67da4bf41cda16d7b8307f25a15ed003c1a09b7d467283f6300
+          url: https://secure.nic.cz/files/datove_schranky/4.29.0/datovka-4.29.0.tar.xz
+          sha256: a708170670c106bdad64c37a938e4838463b0a1031c4e6ffd30ac6b61b7e9a73
         - type: patch
           path: datovka.patch
         - type: patch
@@ -66,15 +79,4 @@ modules:
         - type: script
           dest-filename: datovka-script
           commands: 
-            - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka-run "$@"  
-cleanup:
-  - "*.a"
-  - "*.la"
-  - "*.cmake"
-  - "*.pc"
-  - "/bin/xml*"
-  - /include
-  - /share/aclocal
-  - "/share/doc/libxml*"
-  - /share/gtk-doc
-  - /share/man
+            - exec env TMPDIR=$XDG_CACHE_HOME /app/bin/datovka-run "$@"
