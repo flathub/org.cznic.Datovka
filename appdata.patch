@@ -1,6 +1,5 @@
-
---- /deployment/datovka.metainfo.xml	2026-04-07 12:00:00.000000000 +0200
-+++ datovka.metainfo.xml	2026-04-09 12:00:00.000000000 +0200
+--- a/deployment/cz.nic.datovka.metainfo.xml
++++ b/deployment/cz.nic.datovka.metainfo.xml
 @@ -13,8 +13,8 @@
  	<name>Datovka</name>
  	<name xml:lang="cs">Datovka</name>
@@ -9,10 +8,10 @@
 -	<summary xml:lang="cs">Svobodné uživatelské rozhraní pro datové schránky</summary>
 +	<summary>Access your data boxes</summary>
 +	<summary xml:lang="cs">Přistupujte k datovým schránkám</summary>
- 
- 	<description>
- 		<p>
-@@ -31,23 +31,29 @@
+ 	<developer id="cz.nic">
+ 		<name>CZ.NIC, z. s. p. o.</name>
+ 	</developer>
+@@ -34,21 +34,25 @@
  		<p>
  			The user interface resembles the interface of common e-mail clients.
  		</p>
@@ -36,31 +35,84 @@
 +		<p xml:lang="cs">
  			Uživatelské rozhraní aplikace se podobá rozhraní běžných poštovních klientů.
  		</p>
-+		<p  xml:lang="cs">
++		<p xml:lang="cs">
 +			Tento flatpak není spravovaný CZ.NIC, z.s.p.o.
 +		</p>
  	</description>
--
-+  <developer id="nic.cz">
-+     <name>CZ.NIC</name>
-+  </developer>
+ 
  	<kudos>
- 		<kudo>HiDpiIcon</kudo>
- 		<kudo>ModernToolkit</kudo>
-@@ -55,7 +63,7 @@
+@@ -58,7 +62,7 @@
  
  	<screenshots>
  		<screenshot type="default">
--			<image>https://www.datovka.cz/images/desktop-main.png</image>
+-			<image>https://www.datovka.cz/images/desktop-main-light.png</image>
 +			<image>https://eischmann.cz/desktop-screenshot.png</image>
  			<caption>Main window of the application</caption>
  			<caption xml:lang="cs">Hlavní okno aplikace</caption>
  		</screenshot>
-@@ -63,4 +71,162 @@
+@@ -66,4 +70,220 @@
  
  	<update_contact>datovka@labs.nic.cz</update_contact>
  	<url type="homepage">https://www.datovka.cz</url>
 +	<releases>
++	<release version="4.30.2" date="2026-11-15">
++      <description>
++        <p>New features:</p>
++        <p xml:lang="cs">Nové vlastnosti:</p>
++        <ul>
++          <li>Users who sign in with a certificate and password are shown a warning that this authentication method will be discontinued in ISDS</li>
++          <li xml:lang="cs">Uživatelům, kteří používají přihlašování certifikátem + heslem je zobrazováno upozornění, že tento způsob přihlašování bude v ISDS ukončen</li>
++        </ul>
++        <p>Bug fixes:</p>
++        <p xml:lang="cs">Opravy chyb:</p>
++        <ul>
++          <li>Fixed a bug in saving the ISDS event to the message database</li>
++          <li xml:lang="cs">Opravena chyba v ukládání události ISDS do databáze zpráv</li>
++        </ul>
++      </description>
++    </release>
++	<release version="4.30.1" date="2026-11-10">
++      <description>
++        <p>Bug fixes:</p>
++        <p xml:lang="cs">Opravy chyb:</p>
++        <ul>
++          <li>Fixed a bug in the display of the processing status in the list of received data messages</li>
++          <li xml:lang="cs">Opravena chyba v zobrazování stavu zpracování v seznamu přijatých datových zpráv</li>
++        </ul>
++      </description>
++    </release>
++	<release version="4.30.0" date="2026-11-09">
++      <description>
++        <p>New features:</p>
++        <p xml:lang="cs">Nové vlastnosti:</p>
++        <ul>
++          <li>Data boxes in the box list can be filtered by name, identifier, or login</li>
++          <li>Data boxes in the box list can be sorted by name, number of unread messages, last synchronization time, or displayed in a user-defined order</li>
++          <li>Data messages can be reported to ISDS as spam</li>
++          <li>If a message is marked as spam in ISDS, a warning is displayed in the message list</li>
++          <li xml:lang="cs">Položky v seznamu schránek lze filtrovat podle jména, identifikátoru nebo loginu</li>
++          <li xml:lang="cs">Položky v seznamu schránek lze řadit podle jména, počtu nepřečtených zpráv, času poslední synchronizace nebo je lze zobrazit v uživatelem určeném pořadí</li>
++          <li xml:lang="cs">Datové zprávy je možné nahlásit do ISDS jako spam</li>
++          <li xml:lang="cs">V případě, že je zpráva v ISDS označena jako spam, je v seznamu zpráv zobrazeno upozornění</li>
++        </ul>
++        <p>Enhancements:</p>
++        <p xml:lang="cs">Vylepšení:</p>
++        <ul>
++          <li>The internal structure of message database files is identical to the mobile application</li>
++          <li>The format version number is stored in the message database. Compatibility checks are performed based on the format number. Reopening the database should be faster</li>
++          <li>The user account database structure is shared with the mobile application</li>
++          <li xml:lang="cs">Vnitřní struktura souborů databází zpráv je totožná s mobilní aplikací</li>
++          <li xml:lang="cs">Do databáze zpráv je ukládáno číslo verze formátu. Kontroly na kompatibilitu jsou prováděny podle čísla formátu. Opakované otevření databáze by mělo být rychlejší</li>
++          <li xml:lang="cs">Struktura databáze uživatelských účtů je sdílená s mobilní aplikací</li>
++        </ul>
++        <p>Bug fixes:</p>
++        <p xml:lang="cs">Opravy chyb:</p>
++        <ul>
++          <li>Fixed a bug in processing data for disclosure in the data message list that could cause the application to crash</li>
++          <li xml:lang="cs">Opravena chyba při zpracování dat pro zpřístupnění v seznamu datových zpráv, která mohla vést k pádu aplikace</li>
++        </ul>
++      </description>
++    </release>
 +	<release version="4.29.0" date="2026-04-07">
 +      <description>
 +        <p>New features:</p>
